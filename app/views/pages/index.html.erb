@@ -1,4 +1,24 @@
-<div class='test'>
+<div class="col-xs-12">
+  <div class="col-xs-12" id="articles">
+     <% @main_articles.each_with_index do |article,index| %>
+    <% if index <= 7 then
+         art_style=ARTICLE_POSITIONS[index] %>
+    <% else
+      art_style=ARTICLE_POSITIONS[6]
+  end %>
 
-Content
+      <div class="<%=art_style%>" id='<%=article.id%>'>
+        <div id='<%=article.id%>'>
+          <%= article.title %>
+          <%= art_style %>
+
+        </div>
+        <div id='<%=article.id%>'>
+          <%= article.body %>
+        </div>
+      </div>
+
+    <% end %>
+  </div>
+
 </div>
