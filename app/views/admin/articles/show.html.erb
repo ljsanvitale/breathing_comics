@@ -1,0 +1,19 @@
+<h1><%= @article.title %></h1>
+<p>
+  Tags:
+  <% @article.tags.each do |tag| %>
+    <%= link_to tag.name, admin_tag_path(tag) %>
+  <% end %>
+</p>
+<% if @article.image.exists? %>
+     <%= image_tag @article.image.url %><br/>
+ <% end %>
+<p><%= @article.body %></p>
+<h3>Comments (<%= @article.comments.size %>)</h3>
+
+<%= render partial: 'admin/articles/comment', collection: @article.comments %>
+<%= render partial: 'admin/comments/form' %>
+
+<%= link_to "Back to Articles List", admin_articles_path %>
+<%= link_to "edit", edit_admin_article_path(@article) %>
+<%= link_to "delete", admin_article_path(@article), method: :delete,data: {confirm: "Really delete the article?"}%>
