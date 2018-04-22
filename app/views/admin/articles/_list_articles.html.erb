@@ -1,8 +1,0 @@
-<ul id="articles">
-  <% @articles.each do |article| %>
-    <li>
-      <%= link_to article.title, admin_article_path(article), class: 'article_title', id: "article_#{article.id}" %>
-    </li>
-  <% end %>
-</ul>
-<%= link_to "Create a New Article", new_admin_article_path, class: "new_article" %>

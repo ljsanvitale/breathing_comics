@@ -1,5 +1,10 @@
 <h1><%= @article.title %></h1>
 <p>
+  <%= @article.article_type %><br />
+  <%= @article.body %><br />
+</p>
+
+<p>
   Tags:
   <% @article.tags.each do |tag| %>
     <%= link_to tag.name, admin_tag_path(tag) %>

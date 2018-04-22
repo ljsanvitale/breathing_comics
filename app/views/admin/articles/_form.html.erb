@@ -9,6 +9,10 @@
     <%= f.text_field :title %>
   </p>
   <p>
+    <%= f.label :article_type %><br />
+    <%= f.select :article_type,options_for_select(["main","list"]) %>
+    </p>
+  <p>
     <%= f.label :body %><br />
     <%= f.text_area :body %>
   </p>

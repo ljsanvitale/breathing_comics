@@ -11,14 +11,21 @@
         <div id='<%=article.id%>'>
           <%= article.title %>
           <%= art_style %>
-
         </div>
         <div id='<%=article.id%>'>
           <%= article.body %>
         </div>
       </div>
-
     <% end %>
+  </div>
+  <div class="col-xs-2">
+    AA
+  </div>
+  <div class="col-xs-8">
+    <%= render partial: 'article_list' %>
+  </div>
+  <div class="col-xs-2" id="articles">
+    CC
   </div>
 
 </div>

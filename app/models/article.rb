@@ -8,7 +8,8 @@ class Article < ApplicationRecord
 #     :small  => "150x150>",
 #     :medium => "200x200" }
   validates_attachment_content_type :image, :content_type => ["image/jpg", "image/jpeg", "image/png"]
-
+  scope :main_articles, -> { where(article_type: 'main') }
+  scope :article_list, -> { where(article_type: 'list') }
 
   def tag_list
     self.tags.collect do |tag|
