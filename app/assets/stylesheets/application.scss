@@ -5,3 +5,19 @@
 div {
   border-style: solid;
 }
+
+.main_article_img {
+  /*float:left;*/
+}
+.main_article_title{
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: .008em;
+  line-height: .9;
+  text-transform: uppercase;
+  float:left;
+}
+.nopadding {
+   padding: 0 !important;
+   margin: 0 !important;
+}
