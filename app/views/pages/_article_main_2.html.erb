@@ -1,0 +1,24 @@
+<div class="row-eq-height nopadding">
+  <div class="col-xs-8 nopadding">
+    <div class="col-xs-6 nopadding">
+      <a href="https://www.google">
+        <%= image_tag("/img1.jpg",:class=>"img-responsive main_article_img") %>
+      </a>
+    </div>
+    <div class="col-xs-6 nopadding">
+      <h1 class="main_article_title"><%= @main_articles.first.title %></h1>
+      <p>BY Leonardo Sanvitale</p>
+    </div>
+  </div>
+  <div class="col-xs-4 nopadding">
+    <div class="col-xs-12 nopadding">
+      <a href="https://www.google">
+        <%= image_tag("/img2.jpg",:class=>"img-responsive mx-5 main_article_img") %>
+      </a>
+    </div>
+    <div class="col-xs-12 nopadding">
+      <h1 class="main_article_title"><%= @main_articles.first.title %></h1>
+      <p>BY Leonardo Sanvitale</p>
+    </div>
+  </div>
+</div>

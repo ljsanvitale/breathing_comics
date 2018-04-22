@@ -1,29 +1,15 @@
-<div class="col-xs-12">
-  <div class="col-xs-12" id="articles">
-     <% @main_articles.each_with_index do |article,index| %>
-    <% if index <= 7 then
-         art_style=ARTICLE_POSITIONS[index] %>
-    <% else
-      art_style=ARTICLE_POSITIONS[6]
-  end %>
-      <div class="<%=art_style%> nopadding" id='<%=article.id%>'>
-        <a href="https://www.google">
-          <%= image_tag("/img1.jpg",:class=>"img-responsive mx-5 main_article_img") %>
-        </a>
-          <h1 class="main_article_title"><%= article.title %></h1>
-          <p>BY Leonardo Sanvitale</p>
-      </div>
+  <div class="row-xs-12 hero_main">
+    <%= render partial: 'article_main' %>
+    <%#= render partial: 'article_main_2' %>
+  </div>
+  <div class="row-xs-12">
+    <div class="col-xs-2">
+      AA
     </div>
-    <% end %>
+    <div class="col-xs-8">
+      <%= render partial: 'article_list' %>
+    </div>
+    <div class="col-xs-2" id="articles">
+      CC
+    </div>
   </div>
-  <div class="col-xs-2">
-    AA
-  </div>
-  <div class="col-xs-8">
-    <%= render partial: 'article_list' %>
-  </div>
-  <div class="col-xs-2" id="articles">
-    CC
-  </div>
-
-</div>
