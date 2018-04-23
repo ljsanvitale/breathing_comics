@@ -7,25 +7,25 @@ end %>
 <% if art_style=="col-xs-4" %>
 <div class="<%=art_style%> nopadding" id='<%=article.id%>'>
   <div class="row-xs-6 nopadding">
-    <a href="https://www.google">
-      <%= image_tag("/img2.jpg",:class=>"img-responsive mx-5 main_article_img") %>
-    </a>
+    <%= link_to image_tag("/img2.jpg",:class=>"img-responsive mx-5 main_article_img"), page_path(article) %>
   </div>
   <div class="col-xs-12 nopadding">
-    <h1 class="main_article_title"><%= article.title %></h1>
-    <p>BY Leonardo Sanvitale</p>
+    <h1 class="main_article_title">
+      <%= link_to article.title, page_path(article) %>
+    </h1>
+    <p>BY <%= article.author %></p>
   </div>
 </div>
 <%else%>
 <div class="<%=art_style%> nopadding" id='<%=article.id%>'>
   <div class="col-xs-6 nopadding">
-    <a href="https://www.google">
-      <%= image_tag("/img1.jpg",:class=>"img-responsive mx-5 main_article_img") %>
-    </a>
+<%= link_to image_tag("/img1.jpg",:class=>"img-responsive mx-5 main_article_img"), page_path(article) %>
   </div>
   <div class="col-xs-6 nopadding">
-    <h1 class="main_article_title"><%= article.title %></h1>
-    <p>BY Leonardo Sanvitale</p>
+    <h1 class="main_article_title">
+      <%= link_to article.title, page_path(article) %>
+    </h1>
+    <p>BY <%= article.author %></p>
   </div>
 </div>
 <%end%>

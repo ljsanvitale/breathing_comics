@@ -1,10 +1,15 @@
 <% @articles_list.each do |article| %>
  <div class="col-xs-12" >
-   <div id='<%=article.id%>'>
-     <%= article.title %>
-   </div>
-   <div id='<%=article.id%>'>
-     <%= article.body %>
+   <div class="col-xs-4" >
+     <% if article.image.exists? %>
+        <%= link_to image_tag(article.image.url, :class=>"img-responsive mx-5 main_article_img"), page_path(article) %>
+    <% end %>
+  </div>
+   <div class="col-xs-8" >
+     <div id='<%=article.id%>'>
+       <%= link_to article.title, page_path(article) %>
+     </div>
+     <p>By <%= article.author %> | <%=distance_of_time_in_words_to_now(article.created_at)%> <%= "|" + article.comments.size.to_s if article.comments.size > 0 %></p>
    </div>
  </div>
 <% end %>

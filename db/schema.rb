@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180422193948) do
+ActiveRecord::Schema.define(version: 20180423190126) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -25,6 +25,8 @@ ActiveRecord::Schema.define(version: 20180422193948) do
     t.integer "image_file_size"
     t.datetime "image_updated_at"
     t.string "article_type"
+    t.string "author"
+    t.text "subtitle"
   end
 
   create_table "ckeditor_assets", force: :cascade do |t|

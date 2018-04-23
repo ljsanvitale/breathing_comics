@@ -16,4 +16,5 @@ Rails.application.routes.draw do
    get 'login'  => 'user_sessions#new'
    get 'logout' => 'user_sessions#destroy'
    root to: 'pages#index'
+   resources :pages
 end

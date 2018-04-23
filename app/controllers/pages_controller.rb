@@ -6,4 +6,10 @@ class PagesController < ApplicationController
     @articles_list=Article.article_list.paginate(:page => params[:page],:per_page => 5 )
   end
 
+  def show
+    @article = Article.find(params[:id])
+    @comment = Comment.new
+    @comment.article_id = @article.id
+  end
+
 end
