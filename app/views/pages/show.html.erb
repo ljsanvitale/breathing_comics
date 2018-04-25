@@ -1,19 +1,22 @@
+<div class="col-xs-8">
+  <h1><%= @article.title %></h1>
+  <h2 class="article_subt"><%= @article.subtitle %></h2>
+  <p class="article_list_small"><%= @article.author %> | <%=@article.created_at.to_date%></p>
+  <% if @article.image.exists? %>
+       <%= image_tag @article.image.url, :class=>'img-responsive mx-5 main_article_img' %><br/>
+   <% end %>
 
-<h1><%= @article.title %></h1>
-<p><%= @article.subtitle %></p>
-<p><%= @article.author %> | <%=@article.created_at.to_date%></p>
-<% if @article.image.exists? %>
-     <%= image_tag @article.image.url %><br/>
- <% end %>
+  <div class="article_content ml-1">
+    <%= (@article.body).html_safe %><br />
+  </div>
 
-<p>
-  <%= (@article.body).html_safe %><br />
-</p>
-
-<p>
-  Tags:
-  <% @article.tags.each do |tag| %>
-    <%= link_to tag.name, admin_tag_path(tag) %>
-  <% end %>
-</p>
-<h3>Comments (<%= @article.comments.size %>)</h3>
+  <p>
+    Tags:
+    <% @article.tags.each do |tag| %>
+      <%= link_to tag.name, admin_tag_path(tag) %>
+    <% end %>
+  </p>
+  <h3>Comments (<%= @article.comments.size %>)</h3>
+</div>
+<div class="col-xs-4">
+</div>
