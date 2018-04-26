@@ -30,10 +30,17 @@
 </p>
 <p>
   <% if @article.image.exists? %>
-     <%= image_tag @article.image.url %><br/>
+     <%=@article.image.url %><br/>
  <% end %>
-  <%= f.label :image, "Attach an Image" %><br />
+  <%= f.label :image, "Attach an Image(380x250 px approx)" %><br />
   <%= f.file_field :image %>
+</p>
+<p>
+  <% if @article.main_image.exists? %>
+     <%=@article.main_image.url %><br/>
+ <% end %>
+  <%= f.label :main_image, "Attach the Main Image(380x460 px approx)" %><br />
+  <%= f.file_field :main_image %>
 </p>
   <p>
     <%= f.submit %>

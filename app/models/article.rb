@@ -2,14 +2,16 @@ class Article < ApplicationRecord
   has_many :comments
   has_many :taggings
   has_many :tags, through: :taggings
-  has_attached_file :image#,
-#  :styles => {
-#     :thumb => "100x100#",
-#     :small  => "150x150>",
-#     :medium => "200x200" }
+  has_attached_file :image
+  has_attached_file :main_image#,
+  #:styles => {
+  #   :thumb => "100x100#",
+  #   :small  => "150x150>",
+  #   :medium => "200x200" }
   validates_attachment_content_type :image, :content_type => ["image/jpg", "image/jpeg", "image/png"]
-  scope :main_articles, -> { where(article_type: 'main') }
-  scope :article_list, -> { where(article_type: 'list') }
+  validates_attachment_content_type :main_image, :content_type => ["image/jpg", "image/jpeg", "image/png"]
+  scope :main_articles, -> { where(article_type: 'main').order(created_at: :desc) }
+  scope :article_list, -> { where(article_type: 'list').order(created_at: :desc) }
 
   def tag_list
     self.tags.collect do |tag|
