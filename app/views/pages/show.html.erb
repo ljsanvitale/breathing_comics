@@ -1,22 +1,42 @@
-<div class="col-xs-8">
-  <h1><%= @article.title %></h1>
-  <h2 class="article_subt"><%= @article.subtitle %></h2>
-  <p class="article_list_small"><%= @article.author %> | <%=@article.created_at.to_date%></p>
-  <% if @article.image.exists? %>
+<div class="row">
+  <div class="col-xs-12">
+    <h1><%= @article.title %> <%=@article.count_views%></h1>
+    <h3 class="article_subt"><%= @article.subtitle %></h3>
+    <p class="article_list_small"> By <%= @article.author %> | <%=@article.created_at.to_date%></p>
+  <div>
+</div>
+<div class="row">
+  <div class="col-xs-8">
+    <% if @article.image.exists? %>
        <%= image_tag @article.image.url, :class=>'img-responsive mx-5 main_article_img' %><br/>
-   <% end %>
-
-  <div class="article_content ml-1">
+    <% end %>
+    <div class="article_content ml-1">
     <%= (@article.body).html_safe %><br />
-  </div>
-
-  <p>
-    Tags:
-    <% @article.tags.each do |tag| %>
+    </div>
+    <p> Tags:<% @article.tags.each do |tag| %>
       <%= link_to tag.name, admin_tag_path(tag) %>
     <% end %>
-  </p>
-  <h3>Comments (<%= @article.comments.size %>)</h3>
-</div>
-<div class="col-xs-4">
+    </p>
+    <h3>Comments (<%= @article.comments.size %>)</h3>
+  </div>
+  <div class="col-xs-4">
+    <h3> MOST READ <h3>
+      <%@most_read.each do |art| %>
+      <div class="row">
+          <div class="col-xs-12 nopadding" >
+            <%if art.image.exists? %>
+              <div class="col-xs-12 nopadding ">
+                <%= link_to image_tag(art.image.url, :class=>"img-responsive main_article_img"), page_path(art) %>
+             </div>
+            <%end%>
+            <div class="col-xs-12 nopadding">
+              <p class="most_read_title">
+                <%=art.count_views.to_s %>SS
+                <%= link_to art.title, page_path(art) %>
+              </p>
+            </div>
+          </div>
+        </div>
+        <%end%>
+  </div>
 </div>

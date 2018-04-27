@@ -9,8 +9,14 @@ class PagesController < ApplicationController
 
   def show
     @article = Article.find(params[:id])
+    @article.count_views=@article.count_views+1
+    @article.save
     @comment = Comment.new
     @comment.article_id = @article.id
+    @most_read = Article.order('count_views DESC').limit(5)
+    if @most_read.include?(@article)
+      @most_read << @article
+    end
   end
 
 end

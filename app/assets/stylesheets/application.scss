@@ -135,8 +135,8 @@ text-size-adjust:100%;
   color:#6A6A6A;
   font-style:italic;
   /*font-size:21px;*/
-  font-weight:400;
-  height:30px;
+  font-weight:200;
+  /*height:30px;*/
   letter-spacing:normal;
   line-height:normal;
 }
@@ -155,4 +155,15 @@ text-size-adjust:100%;
   text-rendering:  optimizeLegibility  ;
   text-size-adjust:  100%  ;
   vertical-align:  baseline  ;
+}
+.most_read_title{
+  color:#424242;
+  font-family:  Helvetica, sans-serif  ;
+  /*padding: 0 !important;
+  margin: 0 !important;*/
+  margin-top:10px;
+  margin-bottom:20px;
+  font-style:  normal  ;
+  letter-spacing:normal;
+  line-height:normal
 }
