@@ -1,0 +1,21 @@
+<h2><%=@tag.name%></h2>
+<div class="col-xs-8  main_title_small nopadding" >
+  <%@articles.each do |art| %>
+    <div class="row nopadding" >
+      <%if art.image.exists? %>
+        <div class="col-xs-4 nopadding ">
+          <%= link_to image_tag(art.image.url, :class=>"img-responsive main_article_img"), page_path(art) %>
+       </div>
+      <%end%>
+      <div class="col-xs-8 nopadding ">
+        <div class="article_list_title">
+          <%= link_to art.title, page_path(art) %>
+        </div>
+        <p class="article_list_small">By <%=art.author%></p>
+      </div>
+    </div>
+  <%end%>
+  <%= will_paginate @articles %>
+</div>
+<div class="col-xs-4 nopadding" >
+</div>

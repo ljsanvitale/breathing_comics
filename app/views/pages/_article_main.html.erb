@@ -13,7 +13,7 @@ end %>
       <h1 >
         <%= link_to ar1.title, page_path(ar1) %>
       </h1>
-      <p>By <%=ar1.author%></p>
+      <p><%="By" + ar1.author.author_name if ar1.author%></p>
     </div>
   </div>
   <div class="<%=art_style[1]%> nopadding">
@@ -24,7 +24,7 @@ end %>
       <h1 >
         <%= link_to ar2.title, page_path(ar2) %>
       </h1>
-      <p>By <%=ar2.author%></p>
+      <p><%="By" + ar2.author.author_name if ar2.author%></p>
     </div>
   </div>
 </div>
@@ -41,8 +41,8 @@ end %>
       <h1>
         <%= link_to main_art.title, page_path(main_art) %>
       </h1>
-      <p>By <%=main_art.author%></p>
-    </div>
+        <p><%="By" + main_art.author.author_name if main_art.author%></p>
+      </div>
   </div>
 <%end%>
 </div>

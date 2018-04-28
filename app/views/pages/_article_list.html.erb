@@ -9,7 +9,8 @@
      <div class="article_list_title">
        <%= link_to article.title, page_path(article) %>
      </div>
-     <p class="article_list_small">By <%= article.author %> | <%=distance_of_time_in_words_to_now(article.created_at)%> <%= "|" + article.comments.size.to_s if article.comments.size > 0 %></p>
+     <p class="article_list_small"><%="By" + article.author.author_name if article.author%> | <%=distance_of_time_in_words_to_now(article.created_at)%> <%= "|" + article.comments.size.to_s if article.comments.size > 0 %></p>
+
    </div>
  </div>
 <% end %>

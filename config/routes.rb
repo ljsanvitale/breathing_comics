@@ -6,9 +6,9 @@ Rails.application.routes.draw do
     resources :articles do
     resources :comments
     end
-
-    resources :tags
+   resources :tags
    resources :users
+   resources :authors
      #get 'login'  => 'user_sessions#new'
      #get 'logout' => 'user_sessions#destroy'
   end
@@ -17,4 +17,6 @@ Rails.application.routes.draw do
    get 'logout' => 'user_sessions#destroy'
    root to: 'pages#index'
    resources :pages
+   get '/tags/:tag', :controller => 'pages', :action => 'tag_page'
+   get '/author/:author', :controller => 'pages', :action => 'author_page'
 end

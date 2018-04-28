@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180427152200) do
+ActiveRecord::Schema.define(version: 20180427344356) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -33,6 +33,23 @@ ActiveRecord::Schema.define(version: 20180427152200) do
     t.integer "main_image_file_size"
     t.datetime "main_image_updated_at"
     t.integer "count_views", default: 0
+    t.bigint "author_id"
+    t.index ["author_id"], name: "index_articles_on_author_id"
+  end
+
+  create_table "authors", force: :cascade do |t|
+    t.string "author_name"
+    t.string "description"
+    t.string "email"
+    t.string "twitter"
+    t.string "facebook"
+    t.text "body"
+    t.string "image_file_name"
+    t.string "image_content_type"
+    t.integer "image_file_size"
+    t.datetime "image_updated_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "ckeditor_assets", force: :cascade do |t|

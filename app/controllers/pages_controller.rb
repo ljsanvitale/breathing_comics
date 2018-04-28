@@ -14,9 +14,17 @@ class PagesController < ApplicationController
     @comment = Comment.new
     @comment.article_id = @article.id
     @most_read = Article.order('count_views DESC').limit(5)
-    if @most_read.include?(@article)
-      @most_read << @article
-    end
+    @most_read  = Article.all_except(@article).order('count_views DESC').limit(5)
+  end
+
+  def tag_page
+    @tag=Tag.find(params[:tag])
+    @articles= @tag.articles.paginate(:page => params[:page],:per_page => 5 )
+  end
+
+  def author_page
+    @author=Author.find(params[:author])
+    @articles= @author.articles.paginate(:page => params[:page],:per_page => 5 )
   end
 
 end

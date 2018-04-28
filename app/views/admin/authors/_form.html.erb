@@ -1,0 +1,37 @@
+<%= form_for([:admin, @author], html: {multipart: true}) do |f| %>
+  <ul>
+<% @author.errors.full_messages.each do |error| %>
+    <li><%= error %></li>
+  <% end %>
+  </ul>
+  <p>
+    <%= f.label :author_name %><br />
+    <%= f.text_field :author_name %>
+  </p>
+  <p>
+    <%= f.label :description %><br />
+    <%= f.text_field :description %>
+  </p>
+  <p>
+    <%= f.label :email %><br />
+    <%= f.text_field :email %>
+  </p>
+  <p>
+    <%= f.label :twitter %><br />
+    <%= f.text_field :twitter %>
+  </p>
+  <p>
+    <%= f.label :facebook %><br />
+    <%= f.text_field :facebook %>
+  </p>
+  <p>
+  <% if @author.image.exists? %>
+     <%=@author.image.url %><br/>
+ <% end %>
+  <%= f.label :image, "Attach an Image(380x250 px approx)" %><br />
+  <%= f.file_field :image %>
+</p>
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>

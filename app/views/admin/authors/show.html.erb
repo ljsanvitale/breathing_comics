@@ -1,0 +1,15 @@
+<h1><%= @author.author_name %></h1>
+<p><%= @author.description%></p>
+<p>
+  <%= @author.email %> <br />
+  <%= @author.twitter %><br />
+  <%= @author.facebook %><br />
+</p>
+
+<% if @author.image.exists? %>
+     <%= image_tag @author.image.url %><br/>
+ <% end %>
+
+<%= link_to "Back to Author List", admin_authors_path %>
+<%= link_to "edit", edit_admin_author_path(@author) %>
+<%= link_to "delete", admin_author_path(@author), method: :delete,data: {confirm: "Really delete the author?"}%>

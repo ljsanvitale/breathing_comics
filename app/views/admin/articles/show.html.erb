@@ -1,7 +1,7 @@
 <h1><%= @article.title %></h1>
 <p><%= @article.subtitle%></p>
 <p>
-  <%= @article.author %> <br />
+  <%= @article.author.author_name if @article.author%><br />
   <%= @article.article_type %><br />
   <%= @article.body.html_safe %><br />
 </p>
