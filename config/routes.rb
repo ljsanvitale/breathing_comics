@@ -9,6 +9,7 @@ Rails.application.routes.draw do
    resources :tags
    resources :users
    resources :authors
+   resources :subscribers
      #get 'login'  => 'user_sessions#new'
      #get 'logout' => 'user_sessions#destroy'
   end

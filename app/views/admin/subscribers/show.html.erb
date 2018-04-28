@@ -1,0 +1,28 @@
+<h1><%= @article.title %></h1>
+<p><%= @article.subtitle%></p>
+<p>
+  <%= @article.author.author_name if @article.author%><br />
+  <%= @article.article_type %><br />
+  <%= @article.body.html_safe %><br />
+</p>
+
+<p>
+  Tags:
+  <% @article.tags.each do |tag| %>
+    <%= link_to tag.name, admin_tag_path(tag) %>
+  <% end %>
+</p>
+<% if @article.image.exists? %>
+     <%= image_tag @article.image.url %><br/>
+ <% end %>
+ <% if @article.main_image.exists? %>
+      <%= image_tag @article.main_image.url %><br/>
+  <% end %>
+<h3>Comments (<%= @article.comments.size %>)</h3>
+
+<%= render partial: 'admin/articles/comment', collection: @article.comments %>
+<%= render partial: 'admin/comments/form' %>
+
+<%= link_to "Back to Articles List", admin_articles_path %>
+<%= link_to "edit", edit_admin_article_path(@article) %>
+<%= link_to "delete", admin_article_path(@article), method: :delete,data: {confirm: "Really delete the article?"}%>

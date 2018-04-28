@@ -1,0 +1,10 @@
+<h1>All Subscribers</h1>
+<div>
+  <ul>
+    <% @subscribers.each do |subscriber| %>
+        <li>
+          <%= subscriber.email %>
+        </li>
+      <% end %>
+    </ul>
+</div>
