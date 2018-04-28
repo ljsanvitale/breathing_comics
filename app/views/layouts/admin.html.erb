@@ -5,7 +5,7 @@
     <%= csrf_meta_tags %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <%= stylesheet_link_tag 'screen', media: 'all', 'data-turbolinks-track': 'reload'  %>
+    <%#= stylesheet_link_tag 'screen', media: 'all', 'data-turbolinks-track': 'reload'  %>
   </head>
 
   <body>
@@ -13,7 +13,7 @@
     </div>
     <p class="flash"><%= flash.notice %></p>
     <div>
-      <div class="admin_menu"> 
+      <div class="admin_menu">
           <span> <%= link_to "Users",admin_users_path %>  </span>
           <span> <%= link_to "Articles",admin_articles_path %>  </span>
           <span> <%= link_to "Tags",admin_tags_path %>  </span>
