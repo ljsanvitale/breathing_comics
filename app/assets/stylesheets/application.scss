@@ -112,6 +112,17 @@ text-size-adjust:100%;
   border-top-width:1px;
   box-sizing:border-box;
 }
+.article_list_first {
+  font-family: adelle-sans, Helvetica, sans-serif;
+  color:#424242;
+  font-size:18px;
+  font-weight:600;
+  font-style: normal ;
+  letter-spacing: normal;
+  line-height: 21.6px;
+  box-sizing:border-box;
+}
+
 .article_list img{
   float:left;
   padding: 0 !important;
@@ -190,11 +201,20 @@ text-size-adjust:100%;
 .mh1 div {
   height: 20vh; /* 30% of viewport height*/
   margin-top: 5vh;
-  background-color:blue;
+background-color: black;
+  color: black;
+  border-top-style: solid;
+  border-top-color: white;
+  border-top-width: 1px;;
 }
-.menu_styles{
-  background-color:blue;
-  }
+
 .article_pagination{
   display: none;
+}
+.author_title {
+  border-bottom: solid;
+  border-bottom-color: #424242;
+  border-bottom-style: solid;
+  border-bottom-width: 5px;
+  padding-bottom: 5px;
 }
