@@ -1,17 +1,6 @@
-<% @articles_list.each do |article| %>
- <div class="col-xs-12 article_list nopadding" >
-   <div class="col-xs-4 nopadding" >
-     <% if article.image.exists? %>
-        <%= link_to image_tag(article.image.url, :class=>"img-responsive"), page_path(article) %>
-    <% end %>
-  </div>
-   <div class="col-xs-8" >
-     <div class="article_list_title">
-       <%= link_to article.title, page_path(article) %>
-     </div>
-     <p class="article_list_small"><%="By" + article.author.author_name if article.author%> | <%=distance_of_time_in_words_to_now(article.created_at)%> <%= "|" + article.comments.size.to_s if article.comments.size > 0 %></p>
-
-   </div>
- </div>
-<% end %>
-<%= will_paginate @articles_list %>
+<div id='article_list'>
+  <% @articles_list.each do |article| %>
+        <%= render partial: 'article_list_detail', :locals => {:article => article}  %>
+  <% end %>
+</div>
+<%= will_paginate @articles_list, class: 'article_pagination', renderer: WillPaginateInfinite::InfinitePagination %>

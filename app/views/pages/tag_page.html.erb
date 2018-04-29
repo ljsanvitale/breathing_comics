@@ -14,7 +14,7 @@
         <div class="article_list_title">
           <%= link_to art.title, page_path(art) %>
         </div>
-        <p class="article_list_small">By <%=art.author%></p>
+        <p class="article_list_small">By <%= + link_to(art.author.author_name, author_page_path(art.author)) if art.author%></p>
       </div>
     </div>
   <%end%>

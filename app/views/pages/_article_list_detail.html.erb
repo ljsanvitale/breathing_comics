@@ -1,0 +1,13 @@
+<div class="col-xs-12 article_list nopadding" >
+ <div class="col-xs-4 nopadding" >
+   <% if article.image.exists? %>
+      <%= link_to image_tag(article.image.url, :class=>"img-responsive"), page_path(article) %>
+  <% end %>
+</div>
+ <div class="col-xs-8" >
+   <div class="article_list_title">
+     <%= link_to article.title, page_path(article) %>
+   </div>
+   <p class="article_list_small"> By <%= + link_to(article.author.author_name, author_page_path(article.author)) if article.author%> | <%=distance_of_time_in_words_to_now(article.created_at)%> <%= "|" + article.comments.size.to_s if article.comments.size > 0 %></p>
+   </div>
+</div>

@@ -1,14 +1,10 @@
+<span class="subscribe_text"> Subscribe to the newsletter today!</span>
 <%= form_for [:admin, @subscriber] do |f| %>
   <ul>
-<% @subscriber.errors.full_messages.each do |error| %>
-    <li><%= error %></li>
-  <% end %>
+    <% @subscriber.errors.full_messages.each do |error| %>
+      <li><%= error %></li>
+    <% end %>
   </ul>
-  <p>
-    <%= f.label :email %><br />
-    <%= f.text_field :email %>
-  </p>
-  <p>
-    <%= f.submit %>
-  </p>
-<% end %>
+  <span><%= f.text_field :email %> </span>
+  <span><%= f.button 'Subscribe',type: 'submit' %> </span>
+  <% end %>
