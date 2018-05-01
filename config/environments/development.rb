@@ -53,4 +53,14 @@ Rails.application.configure do
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
   #Paperclip.options[:image_magick_path] = "/mnt/c/Program\ Files/ImageMagick-7.0.7-Q16"
   #Paperclip.options[:command_path] = "/mnt/c/Program\ Files/ImageMagick-7.0.7-Q16"
+  config.paperclip_defaults = {
+      storage: :s3,
+      s3_credentials: {
+        bucket: ENV['S3_BUCKET_NAME'],
+        access_key_id: ENV['AWS_ACCESS_KEY_ID'],
+        secret_access_key: ENV['AWS_SECRET_ACCESS_KEY'],
+        s3_region: ENV['S3_REGION']#,
+      #  s3_host_name: ENV['S3_HOST_NAME']
+      }
+  }
 end
