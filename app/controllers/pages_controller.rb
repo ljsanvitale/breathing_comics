@@ -3,7 +3,7 @@ class PagesController < ApplicationController
   def index
     #@main_articles=Article.take(7)
     @main_four_articles=Article.main_articles.take(4)
-    @main_articles=Article.main_articles.drop(4)
+    @review_articles=Article.article_reviews.take(3)
     @articles_list=Article.article_list.paginate(:page => params[:page],:per_page => 5 )
     @subscriber = Subscriber.new
     respond_to do |format|

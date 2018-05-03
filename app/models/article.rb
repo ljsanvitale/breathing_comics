@@ -14,6 +14,7 @@ class Article < ApplicationRecord
   validates_attachment_content_type :main_image, :content_type => ["image/jpg", "image/jpeg", "image/png"]
   scope :main_articles, -> { where(article_type: 'main').order(created_at: :desc) }
   scope :article_list, -> { where(article_type: 'list').order(created_at: :desc) }
+  scope :article_reviews, -> { where(article_type: 'review').order(created_at: :desc) }
 
   def tag_list
     self.tags.collect do |tag|

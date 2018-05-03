@@ -3,6 +3,12 @@
 <p>
   <%= @article.author.author_name if @article.author%><br />
   <%= @article.article_type %><br />
+  <%= @article.story_by %><br />
+  <%= @article.art_by %><br />
+  <%= @article.number_pages %><br />
+  <%= @article.publisher %><br />
+  <%= @article.published_at %><br />
+  <%= @article.cover_price %><br />
   <%= @article.body.html_safe %><br />
 </p>
 

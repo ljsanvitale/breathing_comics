@@ -9,10 +9,20 @@ div {
 }
 h1 {
   /*margin: 10px;*/
+    font-size: 3vw;
 }
 a { color: inherit;      text-decoration:none; }
 a:hover { color: inherit;     text-decoration:none;  }
 
+h2 {
+  font-size: 1.8vw;
+}
+h3 {
+  font-size: 2vw;
+}
+/*p {
+  font-size: 1.8vw;
+}*/
 
 .hero_main div{
   background-color:black;
@@ -20,11 +30,22 @@ a:hover { color: inherit;     text-decoration:none;  }
   border-top-color: #ffffff;
   border-top-style:solid;
   border-top-width:1px;
+  margin: 1em;
 }
 
+
+.hero_main h1{
+  color:white;
+  font-family: Heroic;
+  margin: 3vw;
+
+}
 .hero_main p{
   color:white;
-  margin: 10px;
+  margin-left: 3vw;
+  margin-bottom: 0;
+  font-size: 1.5vw;
+;
 }
 
 .main_article_img{
@@ -45,13 +66,13 @@ a:hover { color: inherit;     text-decoration:none;  }
   float:left;
   color: white;
   /*font-size: 50px;*/
-  margin-left:10px;
+  /*margin-left:5em;*/
 }
 .main_article_title h1{
-  margin-left:10px;
+  /*margin-left:10px;*/
 }
 .main_article_title p{
-  margin-left:10px;
+  /*margin-left:10px;*/
   font-family: adelle-sans, Helvetica, sans-serif;
   /*font-size:13.5px;*/
   font-weight:300;
@@ -63,7 +84,7 @@ a:hover { color: inherit;     text-decoration:none;  }
 color: white;
 display:inline;
 font-family:Heroic;
-/*font-size:36px;*/
+font-size:1vw;
 font-style:normal;
 font-weight:700;
 height:auto;
@@ -76,12 +97,12 @@ text-size-adjust:100%;
 
 }
 .main_title_small h1{
-  margin-left:10px;
+  margin-left:0.3em;
 }
 .main_title_small p{
-  margin-left:10px;
+  margin-left:1vw;
   font-family: adelle-sans, Helvetica, sans-serif;
-  /*font-size:13.5px;*/
+  font-size:1vw;
   font-weight:300;
   font-style: normal ;
   letter-spacing: normal;
@@ -101,7 +122,7 @@ text-size-adjust:100%;
 .article_list {
   font-family: adelle-sans, Helvetica, sans-serif;
   color:#424242;
-  font-size:18px;
+  /*font-size:1.3vw;*/
   font-weight:600;
   font-style: normal ;
   letter-spacing: normal;
@@ -115,7 +136,7 @@ text-size-adjust:100%;
 .article_list_first {
   font-family: adelle-sans, Helvetica, sans-serif;
   color:#424242;
-  font-size:18px;
+  /*font-size:18px;*/
   font-weight:600;
   font-style: normal ;
   letter-spacing: normal;
@@ -126,16 +147,16 @@ text-size-adjust:100%;
 .article_list img{
   float:left;
   padding: 0 !important;
-  margin-bottom: 10px;
+  /*margin-bottom: 10px;*/
 }
 .article_list_title{
-  margin-top:20px;
+  margin-top:1.5em;
 }
 
 .article_list_small {
   font-family: adelle-sans, Helvetica, sans-serif;
   color:#6A6A6A;
-  font-size:13.5px;
+  font-size:1vw;
   font-weight:300;
   font-style: normal ;
   letter-spacing: normal;
@@ -155,9 +176,9 @@ text-size-adjust:100%;
 .article_content{
   color:#424242;
   display:  block  ;
-  margin-top:40px;
+  margin-top:3vh;
   font-family:  Helvetica, sans-serif  ;
-  font-size:  18px  ;
+  font-size: 1.2vw;
   font-style:  normal  ;
   font-weight:  300  ;
   position:  relative  ;
@@ -168,13 +189,25 @@ text-size-adjust:100%;
   text-size-adjust:  100%  ;
   vertical-align:  baseline  ;
 }
+
+.most_read_main_title{
+  padding: 0 !important;
+  margin-top:0vh;
+  margin-bottom:5vh;
+  font-style:  normal  ;
+  letter-spacing:normal;
+  line-height:normal;
+  text-align:center;
+}
+
 .most_read_title{
   color:#424242;
   font-family:  Helvetica, sans-serif  ;
-  /*padding: 0 !important;
-  margin: 0 !important;*/
-  margin-top:10px;
-  margin-bottom:20px;
+  padding: 0 !important;
+  /*margin: 0 !important;*/
+  font-size: 1.3vw;
+  margin-top:0vh;
+  margin-bottom:5vh;
   font-style:  normal  ;
   letter-spacing:normal;
   line-height:normal
@@ -184,21 +217,23 @@ text-size-adjust:100%;
 }
 .new_subscriber{
   float:left;
-  margin-top: 5vh;
+  margin-top: 2.5vh;
 }
 
 .subscribe_text{
   float:left;
-  color:#424242;
-  font-family:  Helvetica, sans-serif  ;
-  font-size:  2em  ;
+  color:#ffffff;
+  font-size:3vw;
+  /*font-family:  Helvetica, sans-serif  ;
   font-style:  normal  ;
-  font-weight:  300;
-  margin-top: 5vh;
-  /*margin-left: 160px;*/
+  font-weight:  300;*/
+  /*margin-top: 5vh;*/
+  margin-top: 2.5vh;
   margin-right: 15vh;
+  margin-left: 15vh;
+  padding-bottom: 2.5vh;
 }
-.mh1 div {
+.subscribe_form div {
   height: 20vh; /* 30% of viewport height*/
   margin-top: 5vh;
 background-color: black;
@@ -215,6 +250,25 @@ background-color: black;
   border-bottom: solid;
   border-bottom-color: #424242;
   border-bottom-style: solid;
-  border-bottom-width: 5px;
-  padding-bottom: 5px;
+  border-bottom-width: 1vh;
+  padding-bottom: 5vh;
+}
+.main_review_art{
+  /*color:white;
+  font-family: Heroic;*/
+  margin: 1vw;
+}
+.article_review{
+  background-color:black;
+}
+.article_review_img{
+  float: left;
+  margin-right: 3vw;
+}
+.article_review_img_text{
+  color: white;
+  display:inline;
+  font-family:Heroic;
+  font-size:2.3vw;
+  font-style:normal;
 }

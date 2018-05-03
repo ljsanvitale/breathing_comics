@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180428201402) do
+ActiveRecord::Schema.define(version: 20180503344356) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -34,6 +34,12 @@ ActiveRecord::Schema.define(version: 20180428201402) do
     t.datetime "main_image_updated_at"
     t.integer "count_views", default: 0
     t.bigint "author_id"
+    t.string "story_by"
+    t.string "art_by"
+    t.integer "number_pages"
+    t.string "publisher"
+    t.datetime "published_at"
+    t.string "cover_price"
     t.index ["author_id"], name: "index_articles_on_author_id"
   end
 

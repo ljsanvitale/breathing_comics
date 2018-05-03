@@ -18,8 +18,32 @@
   </p>
   <p>
     <%= f.label :article_type %><br />
-    <%= f.select :article_type,options_for_select(["main","list"]) %>
-    </p>
+    <%= f.select :article_type,options_for_select(["main","list","review"]) %>
+  </p>
+  <p>
+    <%= f.label :story_by %><br/>
+    <%=f.text_field :story_by %>
+  </p>
+  <p>
+    <%= f.label :art_by %><br/>
+    <%=f.text_field :art_by %>
+  </p>
+  <p>
+    <%= f.label :number_pages %><br/>
+    <%=f.number_field :number_pages %>
+  </p>
+  <p>
+    <%= f.label :publisher %><br/>
+    <%=f.text_field :publisher %>
+  </p>
+  <p>
+    <%= f.label :published_at %><br/>
+    <%=f.date_field :published_at %>
+  </p>
+  <p>
+    <%= f.label :cover_price %><br/>
+    <%=f.text_field :cover_price %>
+  </p>
   <p>
     <%= f.label :body %><br/>
     <%=f.cktext_area :body %>
