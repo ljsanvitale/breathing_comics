@@ -4,13 +4,13 @@
     <%= link_to image_tag(index==0 ? ar1.main_image.url : ar1.image.url, :class=>"img-responsive main_article_img"), page_path(ar1) %>
     </div>
     <div class="col-xs-8 nopadding">
-        <h1 class="hero_main_text"><%= link_to ar1.title, page_path(ar1) %> </h1>
+        <h1 style="color:white;margin:3vw"><%= link_to ar1.title, page_path(ar1) %> </h1>
         <p class="hero_main_text">By <%= link_to(ar1.author.author_name, author_page_path(ar1.author)) if ar1.author%> </p>
     </div>
   </div>
   <div class="row-eq-height nopadding">
     <div class="col-xs-8 nopadding">
-      <h1 class="hero_main_text"> <%= link_to ar2.title, page_path(ar2) %> </h1 >
+      <h1 style="color:white;margin:3vw"> <%= link_to ar2.title, page_path(ar2) %> </h1 >
       <p class="hero_main_text">By <%= link_to(ar2.author.author_name, author_page_path(ar2.author)) if ar2.author%> </p>
     </div>
     <div class="col-xs-4 nopadding">
