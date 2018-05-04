@@ -10,10 +10,10 @@ end %>
       <%= link_to image_tag(index==0 ? ar1.main_image.url : ar1.image.url, :class=>"img-responsive main_article_img"), page_path(ar1) %>
     </div>
     <div class="<%=art_style[2]%> nopadding">
-      <h1 >
+      <h1 class="hero_main_text">
         <%= link_to ar1.title, page_path(ar1) %>
       </h1>
-      <p><%="By" + ar1.author.author_name if ar1.author%></p>
+      <p class="hero_main_text"><%="By" + ar1.author.author_name if ar1.author%></p>
     </div>
   </div>
   <div class="<%=art_style[1]%> nopadding">
