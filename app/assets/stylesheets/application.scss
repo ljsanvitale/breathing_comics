@@ -233,12 +233,13 @@ text-size-adjust:100%;
   font-weight:  300;*/
   /*margin-top: 5vh;*/
   margin-top: 2.5vh;
-  margin-right: 15vh;
-  margin-left: 15vh;
+  margin-right: 3vh;
+  margin-left: 3vh;
   padding-bottom: 2.5vh;
 }
 .subscribe_form div {
-  height: 20vh; /* 30% of viewport height*/
+  /*height: 20vh;*/ /* 30% of viewport height*/
+  height: auto;
   margin-top: 5vh;
 background-color: black;
   color: black;
@@ -275,4 +276,88 @@ background-color: black;
   font-family:Heroic;
   font-size:2.3vw;
   font-style:normal;
+}
+
+#new_subscriber  {
+    position: relative;
+}
+.new_subscriber label {
+    color: #000;
+}
+
+.new_subscriber .form-control {
+    border-radius: 0;
+    border: 1px solid #white;
+    color: white;
+    background-color: black;
+    box-shadow: none;
+    font-size: 1vw;
+    height: auto;
+    /*margin-bottom: 20px;*/
+}
+.new_subscriber .form-control::placeholder {
+    color: white;
+  }
+
+.new_subscriber .form-group {
+    margin-bottom: 0;
+}
+
+.new_subscriber.form-control {
+    resize: none;
+}
+
+.new_subscriber .form-control:focus {
+    border-color: white;
+}
+
+.new_subscriber .btn.btn-primary {
+    border-color: white;
+    margin-top: 30px;
+}
+
+.new_subscriber .btn.btn-primary:hover {
+    color: #00bff3;
+    border-color: white;
+}
+
+.new_subscriber .btn.btn-primary:before {
+   display: none;
+}
+
+
+.new_subscriber .btn.btn-default {
+    color: white;
+    border-radius: 0;
+    font-size: 1vw;
+    vertical-align: top;
+    /*font-weight: normal;*/
+    background-color: black;
+    border-top-style: solid;
+    border-top-color: white;
+    border-top-width: 1px;
+    background-image: none;
+}
+
+.new_subscriber .btn.btn-default:hover {
+    color: black;
+    background-color: white;
+}
+
+
+.nav-backg {
+  background-color: black;
+}
+.navbar-default .nav-backg-h{
+  color: white;
+  font-size: 3.1vw;
+  font-family: Heroic;
+}
+.navbar-default .nav-backg-h:hover{
+  color: white;
+  text-decoration:none;
+}
+.new_subscriber .btn.btn-default .primary:hover {
+    color: #00bff3;
+    border-color: white;
 }
