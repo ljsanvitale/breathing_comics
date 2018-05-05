@@ -1,4 +1,5 @@
 class PagesController < ApplicationController
+before_action :check_for_mobile, :only => :show
 
   def index
     #@main_articles=Article.take(7)
