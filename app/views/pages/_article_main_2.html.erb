@@ -29,8 +29,10 @@
     <%end%>
     <div class="col-xs-12 nopadding">
       <h2 class="main_review_art"><%= link_to main_art.title, page_path(main_art) %> </h2>
-        <p class="main_review_art"><%="By " + main_art.author.author_name if main_art.author%></p>
-      </div>
+        <p class="main_review_art">
+          By <%= link_to(main_art.author.author_name, author_page_path(main_art.author)) if main_art.author%>
+        </p>
+    </div>
   </div>
 <%end%>
 </div>
