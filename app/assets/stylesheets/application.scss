@@ -154,7 +154,9 @@ text-size-adjust:100%;
   /*margin-bottom: 10px;*/
 }
 .article_list_title{
-  margin-top:1.5em;
+  margin-top:1vw;
+  font-size:1.5vw;
+  line-height: 2.5vw;
 }
 
 .article_list_small {
@@ -164,7 +166,7 @@ text-size-adjust:100%;
   font-weight:300;
   font-style: normal ;
   letter-spacing: normal;
-  line-height: 21.6px;
+  /*line-height: 21.6px;*/
 }
 
 .article_subt{
@@ -269,10 +271,13 @@ text-size-adjust:100%;
   color: white;
   display:inline;
   font-family:Heroic;
-  font-size:2.3vw;
+  font-size:1.4vw;
   font-style:normal;
+  padding-top: 3vh;
 }
-
+.col-xs-8 .article_review_img_text p{
+  margin-bottom: 3vh;
+}
 #new_subscriber  {
     position: relative;
 }

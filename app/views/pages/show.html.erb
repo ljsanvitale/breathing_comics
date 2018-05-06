@@ -12,10 +12,12 @@
   <div class="col-xs-8">
     <% if @article.article_type == 'review'then%>
       <div class="row article_review">
-        <%if @article.image.exists? %>
-            <%= image_tag @article.image.url, :class=>'img-responsive mx-5 article_review_img' %><br/>
-         <% end %>
-        <div class="article_review_img_text">
+          <%if @article.image.exists? %>
+          <div class="col-xs-4 nopadding">
+              <%= image_tag @article.image.url, :class=>'img-responsive mx-5 article_review_img' %><br/>
+              <% end %>
+        </div>
+        <div class="col-xs-8  article_review_img_text">
           <p> STORY BY : <%=@article.story_by%></p>
           <p> ART BY: <%=@article.art_by%></p>
           <p> PAGES: <%=@article.number_pages%></p>
