@@ -5,13 +5,13 @@
     </div>
     <div class="col-xs-8 nopadding">
         <h1 style="color:white;margin:3vw;margin-bottom:0;"><%= link_to ar1.title, page_path(ar1) %> </h1>
-        <p class="hero_main_text" style="color:white;margin:3vw;margin-bottom:0;">By <%= link_to(ar1.author.author_name, author_page_path(ar1.author)) if ar1.author%> </p>
+        <p class="hero_main_text" style="color:white;margin-bottom:0;">By <%= link_to(ar1.author.author_name, author_page_path(ar1.author)) if ar1.author%> </p>
     </div>
   </div>
   <div class="row-eq-height nopadding">
     <div class="col-xs-8 nopadding">
       <h1 style="color:white;margin:3vw;margin-bottom:0;"> <%= link_to ar2.title, page_path(ar2) %> </h1 >
-      <p class="hero_main_text" style="color:white;margin:3vw;margin-bottom:0;">By <%= link_to(ar2.author.author_name, author_page_path(ar2.author)) if ar2.author%> </p>
+      <p class="hero_main_text" style="color:white;margin-bottom:0;">By <%= link_to(ar2.author.author_name, author_page_path(ar2.author)) if ar2.author%> </p>
     </div>
     <div class="col-xs-4 nopadding">
       <%= link_to image_tag(index==0 ? ar2.image.url : ar2.main_image.url, :class=>"img-responsive main_article_img"), page_path(ar2) %>
