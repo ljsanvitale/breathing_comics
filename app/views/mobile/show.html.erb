@@ -2,7 +2,7 @@
   <%= render partial: 'meta_info_article' %>
 <% end %>
 <div class="row">
-  <div class="col-xs-12 nopadding">
+  <div class="col-xs-12">
     <h1><%= @article.title %> <%=@article.count_views%></h1>
     <h3 class="article_subt"><%= @article.subtitle %></h3>
     <p class="article_list_small"> By <%= + link_to(@article.author.author_name, author_page_path(@article.author)) if @article.author%> | <%=@article.created_at.to_date%></p>

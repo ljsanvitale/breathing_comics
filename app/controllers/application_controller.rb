@@ -20,8 +20,16 @@ class ApplicationController < ActionController::Base
     end
   end
 
+  def detect_device_variant
+    request.variant = :phone if browser.device.mobile?
+    prepare_for_mobile if browser.device.mobile?
+  end
+
   def prepare_for_mobile
-    prepend_view_path Rails.root + 'app' + 'mobile'
+    new_path= Rails.root + 'app' + 'views/mobile'
+    #raise new_path.to_s
+    prepend_view_path new_path
+    #raise Rails.root.to_s
   end
 
 end

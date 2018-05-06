@@ -2,7 +2,7 @@
   <%= render partial: 'meta_info_article' %>
 <% end %>
 <div class="row">
-  <div class="col-xs-12 nopadding">
+  <div class="col-xs-12">
     <h1><%= @article.title %> <%=@article.count_views%></h1>
     <h3 class="article_subt"><%= @article.subtitle %></h3>
     <p class="article_list_small"> By <%= + link_to(@article.author.author_name, author_page_path(@article.author)) if @article.author%> | <%=@article.created_at.to_date%></p>
@@ -11,12 +11,12 @@
 <div class="row">
   <div class="col-xs-8">
     <% if @article.article_type == 'review'then%>
-      <div class="row article_review">
+      <div class="row article_review row-eq-height">
           <%if @article.image.exists? %>
-          <div class="col-xs-4 nopadding">
-              <%= image_tag @article.image.url, :class=>'img-responsive mx-5 article_review_img' %><br/>
-              <% end %>
-        </div>
+            <div class="col-xs-4" style="padding-right:0;">
+                <%= image_tag @article.image.url, :class=>'img-responsive mx-5 article_review_img' %><br/>
+                <% end %>
+              </div>
         <div class="col-xs-8  article_review_img_text">
           <p> STORY BY : <%=@article.story_by%></p>
           <p> ART BY: <%=@article.art_by%></p>
@@ -27,18 +27,22 @@
       </div>
       <%else%>
       <div class="row">
-      <% if @article.image.exists? %>
-        <%= image_tag @article.image.url, :class=>'img-responsive mx-5 main_article_img' %><br/>
-      <% end %>
+        <% if @article.image.exists? %>
+          <div class="col-xs-12">
+            <%= image_tag @article.image.url, :class=>'img-responsive mx-5 main_article_img' %><br/>
+        </div>
+        <% end %>
       </div>
     <% end %>
 
     <div class="row article_content ml-1">
-      <%= (@article.body).html_safe %><br />
-      <p> Tags:<% @article.tags.each do |tag| %>
-      <%= link_to tag.name, tag_page_path(tag) %>
-      <% end %>
-      </p>
+      <div class="col-xs-12">
+        <%= (@article.body).html_safe %><br />
+        <p> Tags:<% @article.tags.each do |tag| %>
+          <%= link_to tag.name, tag_page_path(tag) %>
+          <% end %>
+        </p>
+      </div>
     </div>
     <!--<h3>Comments (<%= @article.comments.size %>)</h3>-->
   </div>
