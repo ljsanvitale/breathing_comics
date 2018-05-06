@@ -104,7 +104,7 @@ text-size-adjust:100%;
   margin-left:0.3em;
 }
 .main_title_small p{
-  margin-left:1vw;
+  /*margin-left:1vw;*/
   font-family: adelle-sans, Helvetica, sans-serif;
   font-size:1vw;
   font-weight:300;
@@ -204,6 +204,8 @@ text-size-adjust:100%;
   letter-spacing:normal;
   line-height:normal;
   text-align:center;
+  background-color: black;
+  color: white;
 }
 
 .most_read_title{
