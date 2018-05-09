@@ -24,11 +24,6 @@ before_action :detect_device_variant, :only => :show
     @most_read = Article.order('count_views DESC').limit(5)
     @most_read  = Article.all_except(@article).order('count_views DESC').limit(5)
     @subscriber = Subscriber.new
-    #if request.variant == :phone
-    #  render
-    #else
-  #    render
-#    end
   end
 
   def tag_page
