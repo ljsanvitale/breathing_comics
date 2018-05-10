@@ -14,8 +14,7 @@
   </p>
   <p>
     <%= f.label 'author related' %><br />
-    <%= f.label f.object.author.id %><br />
-     <%= f.collection_select(:author_id, Author.all, :id, :author_name, {:selected => f.object.author.id}) %>
+    <%= f.collection_select(:author_id, Author.all, :id, :author_name, {:selected => if f.object.author then f.object.author.id else ''end}) %>
   </p>
   <p>
     <%= f.label :article_type %><br />
