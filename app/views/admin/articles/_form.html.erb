@@ -14,11 +14,12 @@
   </p>
   <p>
     <%= f.label 'author related' %><br />
-     <%= f.collection_select(:author_id, Author.all, :id, :author_name) %>
+    <%= f.label f.object.author.id %><br />
+     <%= f.collection_select(:author_id, Author.all, :id, :author_name, {:selected => f.object.author.id}) %>
   </p>
   <p>
     <%= f.label :article_type %><br />
-    <%= f.select :article_type,options_for_select(["main","list","review"]) %>
+    <%= f.select :article_type,options_for_select(["main","list","review"],f.object.article_type) %>
   </p>
   <p>
     <%= f.label :story_by %><br/>
