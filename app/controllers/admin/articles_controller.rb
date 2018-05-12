@@ -2,7 +2,7 @@ class Admin::ArticlesController < Admin::BaseController
   include ArticlesHelper
 
   def index
-    @articles=Article.all
+    @articles=Article.all.paginate(:page => params[:page],:per_page => 20 )
   end
 
   def show

@@ -12,6 +12,7 @@ class Article < ApplicationRecord
   #   :medium => "200x200" }
   validates_attachment_content_type :image, :content_type => ["image/jpg", "image/jpeg", "image/png"]
   validates_attachment_content_type :main_image, :content_type => ["image/jpg", "image/jpeg", "image/png"]
+  default_scope { order(created_at: :desc) }
   scope :main_articles, -> { where(article_type: 'main').order(created_at: :desc) }
   scope :article_list, -> { where(article_type: 'list').order(created_at: :desc) }
   scope :article_reviews, -> { where(article_type: 'review').order(created_at: :desc) }
