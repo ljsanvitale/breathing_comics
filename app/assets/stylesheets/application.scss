@@ -9,7 +9,7 @@ div {
 }
 h1 {
   /*margin: 10px;*/
-    font-size: 4vw;
+    font-size: 3vw;
 }
 a {
   color: inherit;
@@ -20,7 +20,7 @@ a:hover { color: #e5127d;     text-decoration:none;  }
 a:visited {     text-decoration:none;  }
 
 h2 {
-  font-size: 3vw;
+  font-size: 2.5vw;
 }
 h3 {
   font-size: 2vw;
@@ -162,14 +162,14 @@ text-size-adjust:100%;
 }
 .article_list_title{
   margin-top:1vw;
-  font-size:1.8vw;
+  font-size:1.6vw;
   line-height: 2.5vw;
 }
 
 .article_list_small {
   font-family: adelle-sans, Helvetica, sans-serif;
   color:#6A6A6A;
-  font-size:1.6vw;
+  font-size:1.2vw;
   font-weight:300;
   font-style: normal ;
   letter-spacing: normal;
@@ -376,4 +376,35 @@ text-size-adjust:100%;
     color: white;
     text-align: center;
     font-size: 1.8vw;
+}
+/* ----------- iPhone 6+, 7+ and 8+ ----------- */
+
+/* Portrait and Landscape */
+@media only screen and (max-device-width: 500px) {
+
+h1{
+      font-size: 6vw;
+}
+h2 {
+  font-size: 5vw;
+}
+h3 {
+  font-size: 4vw;
+}
+.navbar-default .nav-backg-h{
+  font-size: 6vw;
+ }
+
+  .article_content{
+      font-size: 4vw;
+  }
+  .article_list_title{
+    font-size:2vw;
+  }
+  .hero_main p{
+    font-size: 1.8vw;
+  }
+  .article_list_small {
+    font-size:1.6vw;
+  }
 }
