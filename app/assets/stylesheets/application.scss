@@ -9,7 +9,7 @@ div {
 }
 h1 {
   /*margin: 10px;*/
-    font-size: 2.5vw;
+    font-size: 4vw;
 }
 a {
   color: inherit;
@@ -20,7 +20,7 @@ a:hover { color: #e5127d;     text-decoration:none;  }
 a:visited {     text-decoration:none;  }
 
 h2 {
-  font-size: 1.8vw;
+  font-size: 3vw;
 }
 h3 {
   font-size: 2vw;
@@ -162,14 +162,14 @@ text-size-adjust:100%;
 }
 .article_list_title{
   margin-top:1vw;
-  font-size:1.5vw;
+  font-size:1.8vw;
   line-height: 2.5vw;
 }
 
 .article_list_small {
   font-family: adelle-sans, Helvetica, sans-serif;
   color:#6A6A6A;
-  font-size:1vw;
+  font-size:1.6vw;
   font-weight:300;
   font-style: normal ;
   letter-spacing: normal;
@@ -191,7 +191,7 @@ text-size-adjust:100%;
   display:  block  ;
   margin-top:3vh;
   font-family:  Helvetica, sans-serif  ;
-  font-size: 1.2vw;
+  font-size: 1.8vw;
   font-style:  normal  ;
   font-weight:  300  ;
   position:  relative  ;
@@ -220,7 +220,7 @@ text-size-adjust:100%;
   font-family:  Helvetica, sans-serif  ;
   padding: 0 !important;
   /*margin: 0 !important;*/
-  font-size: 1.3vw;
+  font-size: 1.4vw;
   margin-top:0vh;
   margin-bottom:5vh;
   font-style:  normal  ;
@@ -280,7 +280,7 @@ text-size-adjust:100%;
   color: white;
   display:inline;
   font-family:Heroic;
-  font-size:1.4vw;
+  font-size:1.8vw;
   font-style:normal;
   padding-top: 3vh;
   background-color: black;
@@ -360,7 +360,7 @@ text-size-adjust:100%;
 }
 .navbar-default .nav-backg-h{
   color: white;
-  font-size: 3.1vw;
+  font-size: 4vw;
   font-family: Heroic;
 }
 .navbar-default .nav-backg-h:hover{
@@ -375,5 +375,5 @@ text-size-adjust:100%;
   background-color: black;
     color: white;
     text-align: center;
-    font-size: 1vw;
+    font-size: 1.8vw;
 }

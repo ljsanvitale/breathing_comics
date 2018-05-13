@@ -1,4 +1,4 @@
-  <div class="col-xs-8">
+  <div class="col-xs-9">
     <% if @article.article_type == 'review'then%>
       <div class="row article_review row-eq-height">
           <%if @article.image.exists? %>
@@ -36,7 +36,7 @@
     </div>
     <!--<h3>Comments (<%= @article.comments.size %>)</h3>-->
   </div>
-  <div class="col-xs-4">
+  <div class="col-xs-3">
     <h3 class="most_read_main_title "> MOST READ <h3>
       <%@most_read.each do |art| %>
       <div class="row nopadding">
