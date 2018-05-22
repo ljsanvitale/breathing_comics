@@ -389,6 +389,11 @@ margin-right:2vw;
   color: white;
   font-size: 4vw;
   font-family: Heroic;
+  float: left;
+  text-align: center;
+  height: 60px;
+  width: 100%;
+
 }
 .navbar-default .nav-backg-h:hover{
   color: white;
@@ -418,10 +423,19 @@ h2 {
 h3 {
   font-size: 4vw;
 }
+.navbar{
+    min-height: 33px;
+}
 .navbar-default .nav-backg-h{
   font-size: 6vw;
+  float: left;
+  text-align: center;
+  height: 33px;
+  width: 100%;
+  padding-top:5px;
+  
  }
-  .article_content{
+.article_content{
       font-size: 4vw;
   }
   .article_list_title{
