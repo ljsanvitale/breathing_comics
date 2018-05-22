@@ -2,12 +2,12 @@
   <%= render partial: 'meta_info_article' %>
 <% end %>
 <h2 class="text-center author_title"><%=@author.author_name%></h2>
-<div class="col-xs-8  main_title_small nopadding" >
+<div class="col-xs-8  main_title_small margin-2v" >
   <div id='article_list'>
     <% @articles.each do |article| %>
       <%= render partial: 'article_list_detail', :locals => {:article => article}  %>
     <% end %>
   </div>
   <%= will_paginate @articles, class: 'article_pagination', renderer: WillPaginateInfinite::InfinitePagination %>
-<div class="col-xs-4 nopadding" >
+<div class="col-xs-4 nopadding margin-2v" >
 </div>

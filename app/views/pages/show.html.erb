@@ -2,14 +2,14 @@
   <%= render partial: 'meta_info_article' %>
 <% end %>
 
-<div class="row">
+<div class="row margin-2v">
   <div class="col-xs-12">
     <h1><%= @article.title %></h1>
     <h3 class="article_subt"><%= @article.subtitle %></h3>
     <p class="article_list_small"> By <%= + link_to(@article.author.author_name, author_page_path(@article.author)) if @article.author%> | <%=@article.created_at.to_date%></p>
   </div>
 </div>
-<div class="row">
+<div class="row margin-2v">
   <% if request.variant.phone? then %>
     <%= render partial: 'detail_article_mobile' %>
   <%else %>
