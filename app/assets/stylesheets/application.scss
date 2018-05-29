@@ -415,13 +415,15 @@ margin-right:2vw;
 @media only screen and (max-device-width: 500px) {
 
 h1{
-      font-size: 6vw;
+      font-size: 4.5vw;
+      margin-top: 1.5vw;
 }
 h2 {
-  font-size: 5vw;
+  font-size: 4vw;
+  margin-left: .5vw;
 }
 h3 {
-  font-size: 4vw;
+  font-size: 3.5vw;
 }
 .navbar{
     min-height: 33px;
@@ -433,7 +435,7 @@ h3 {
   height: 33px;
   width: 100%;
   padding-top:5px;
-  
+
  }
 .article_content{
       font-size: 4vw;
@@ -443,6 +445,7 @@ h3 {
   }
   .hero_main p{
     font-size: 2.5vw;
+    margin-left: 0.5vw;
   }
   .article_list_small {
     font-size:2.5vw;

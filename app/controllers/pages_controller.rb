@@ -2,9 +2,9 @@ class PagesController < ApplicationController
 before_action :detect_device_variant, :only => :show
 
   def index
-    @main_four_articles=Article.main_articles.take(4)
+    @main_four_articles=Article.article_list.take(4)
     @review_articles=Article.article_reviews.take(3)
-    @articles_list=Article.article_list.paginate(:page => params[:page],:per_page => 5 )
+    @articles_list=Article.article_list.all_except(@main_four_articles).paginate(:page => params[:page],:per_page => 5 )
     @subscriber = Subscriber.new
     respond_to do |format|
       format.html
