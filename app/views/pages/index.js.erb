@@ -1,1 +1,1 @@
-<%= infinite_append "#article_list", { partial: "pages/article_list", collection: @articles_list }  %>
+<%= infinite_append "#article_list", { partial: "pages/article_list_detail", collection: @articles_list , :as => :article }  %>
