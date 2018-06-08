@@ -26,11 +26,19 @@ before_action :detect_device_variant, :only => :show
   def tag_page
     @tag=Tag.find(params[:tag])
     @articles= @tag.articles.paginate(:page => params[:page],:per_page => 5 )
+    respond_to do |format|
+      format.html
+      format.js
+    end
   end
 
   def author_page
     @author=Author.find(params[:author])
     @articles= @author.articles.paginate(:page => params[:page],:per_page => 5 )
+    respond_to do |format|
+      format.html
+      format.js
+    end
   end
 
 end
