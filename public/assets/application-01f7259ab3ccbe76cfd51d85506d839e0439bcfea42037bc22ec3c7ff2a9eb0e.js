@@ -15141,7 +15141,7 @@ jQuery(function() {
       var bottom_distance = 20;
 
       if (more_posts_url && $(window).scrollTop() > $(document).height() - $(window).height() - bottom_distance) {
-        $('.infinite-pagination').html('Carregando...');
+        $('.infinite-pagination').html('Loading...');
         $.getScript(more_posts_url);
       }
     });
