@@ -385,20 +385,41 @@ margin-right:2vw;
 .nav-backg {
   background-color: black;
 }
+
 .navbar-default .nav-backg-h{
   color: white;
   font-size: 4vw;
   font-family: Heroic;
   float: left;
-  text-align: center;
-  height: 60px;
-  width: 100%;
+  /*text-align: center;*/
+  /*height: 60px;*/
+  /*width: 100%;*/
 
 }
+.navbar-default .navbar-nav li a {
+  color: white;
+  font-size: 2vw;
+  font-family: Heroic;
+  float: left;
+  text-align: center;
+}
+.navbar-default .navbar-nav li a:hover {
+  color: #e5127d;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: white;
+}
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+  background-color: black;
+}
+
 .navbar-default .nav-backg-h:hover{
   color: white;
   text-decoration:none;
 }
+
+
 .new_subscriber .btn.btn-default .primary:hover {
     color: #00bff3;
     border-color: white;
@@ -432,10 +453,16 @@ h3 {
   font-size: 6vw;
   float: left;
   text-align: center;
-  height: 33px;
-  width: 100%;
-  padding-top:5px;
-
+  /*height: 33px;*/
+  /*width: 100%;*/
+  padding-top:13px;
+ }
+ .navbar-default .navbar-nav li a {
+   color: white;
+   font-size: 4vw;
+   font-family: Heroic;
+   float: left;
+   text-align: center;
  }
 .article_content{
       font-size: 4vw;
