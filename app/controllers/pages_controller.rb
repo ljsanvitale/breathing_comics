@@ -2,6 +2,7 @@ class PagesController < ApplicationController
 before_action :detect_device_variant, :only => :show
 
   def index
+
     @main_four_articles=Article.article_list.take(4)
     @review_articles=Article.article_reviews.take(3)
     @articles_list=Article.article_list.all_except(@main_four_articles).paginate(:page => params[:page],:per_page => 5 )
@@ -41,4 +42,27 @@ before_action :detect_device_variant, :only => :show
     end
   end
 
+  def news_page
+    @articles= Article.article_news.paginate(:page => params[:page],:per_page => 5 )
+    respond_to do |format|
+      format.html
+      format.js
+    end
+  end
+
+  def reviews_page
+    @articles= Article.article_reviews.paginate(:page => params[:page],:per_page => 5 )
+    respond_to do |format|
+      format.html
+      format.js
+    end
+  end
+
+  def articles_page
+    @articles= Article.article_notes.paginate(:page => params[:page],:per_page => 5 )
+    respond_to do |format|
+      format.html
+      format.js
+    end
+  end
 end

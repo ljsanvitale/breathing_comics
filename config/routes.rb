@@ -20,4 +20,7 @@ Rails.application.routes.draw do
    resources :pages
    get '/tags/:tag', :controller => 'pages', :action => 'tag_page', :as => :tag_page
    get '/author/:author', :controller => 'pages', :action => 'author_page', :as => :author_page
+   get '/news', :controller => 'pages', :action => 'news_page'
+   get '/reviews', :controller => 'pages', :action => 'reviews_page'
+   get '/articles', :controller => 'pages', :action => 'articles_page'
 end
