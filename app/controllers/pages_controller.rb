@@ -51,7 +51,7 @@ before_action :detect_device_variant, :only => :show
   end
 
   def reviews_page
-    @articles= Article.article_reviews.paginate(:page => params[:page],:per_page => 5 )
+    @articles= Article.article_reviews.paginate(:page => params[:page],:per_page => 6 )
     respond_to do |format|
       format.html
       format.js
