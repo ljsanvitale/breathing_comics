@@ -33,4 +33,12 @@ class Article < ApplicationRecord
   def self.all_except(article)
     where.not(id: article)
   end
+
+  def slug
+   title.downcase.gsub(" ", "-")  
+ end
+
+ def to_param
+  "#{id}-#{slug}"
+  end
 end

@@ -3,6 +3,16 @@
 @import "bootstrap";
 @import "bootstrap/theme";
 
+
+/*@font-face {
+  font-family: LemonMilk;
+  src: url('/assets/fonts/LemonMilk.otf') format("otf");
+ }
+@font-face { font-family: LemonMilk;
+ font-weight: bold;
+ src: url('/assets/fonts/LemonMilkbold.otf') format("otf");
+}*/
+
 div {
   /*border-style: solid;*/
 
@@ -31,7 +41,8 @@ h3 {
 
 .hero_main div{
   background-color:black;
-  font-family: Heroic;
+  /*font-family: Heroic;*/
+  font-family:Heroic;
   border-top-color: #ffffff;
   border-top-style:solid;
   border-top-width:1px;
@@ -42,13 +53,6 @@ h3 {
   text-rendering: optimizeLegibility;
 }
 
-
-/*.hero_main h1 a{
-  color:white;
-  font-family: Heroic;
-  margin: 3vw;
-
-}*/
 .hero_main p{
   color:white;
   margin-left: 3vw;
