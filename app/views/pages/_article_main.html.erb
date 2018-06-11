@@ -1,7 +1,7 @@
 <% @main_four_articles.each_slice(2).with_index do |(ar1, ar2),index| %>
  <div class="row-eq-height nopadding">
    <div class="col-xs-4  nopadding">
-    <%= link_to image_tag(index==0 ? ar1.main_image.url : ar1.image.url, :class=>"img-responsive main_article_img"), page_path(ar1) %>
+    <%= link_to image_tag(index==0 ? ar1.image.url : ar1.image.url, :class=>"img-responsive main_article_img",:alt=>ar1.img_alt_text), page_path(ar1) %>
     </div>
     <div class="col-xs-8 nopadding">
         <h1 class="hero_main_text" ><%= link_to ar1.title, page_path(ar1) %> </h1>
@@ -14,7 +14,7 @@
       <p class="hero_main_text_by">By <%= link_to(ar2.author.author_name, author_page_path(ar2.author)) if ar2.author%> </p>
     </div>
     <div class="col-xs-4 nopadding">
-      <%= link_to image_tag(index==0 ? ar2.image.url : ar2.main_image.url, :class=>"img-responsive main_article_img"), page_path(ar2) %>
+      <%= link_to image_tag(index==0 ? ar2.image.url : ar2.image.url, :class=>"img-responsive main_article_img",:alt=>ar2.img_alt_text), page_path(ar2) %>
     </div>
   </div>
 <%end%>
@@ -24,7 +24,7 @@
   <div class="col-xs-4  nopadding" >
     <%if main_art.image.exists? %>
       <div class="col-xs-12 nopadding ">
-        <%= link_to image_tag(main_art.image.url, :class=>"img-responsive main_article_img"), page_path(main_art) %>
+        <%= link_to image_tag(main_art.image.url, :class=>"img-responsive main_article_img",:alt=>main_art.img_alt_text), page_path(main_art) %>
      </div>
     <%end%>
     <div class="col-xs-12 nopadding">

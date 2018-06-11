@@ -64,11 +64,12 @@
   <%= f.file_field :image %>
 </p>
 <p>
-  <% if @article.main_image.exists? %>
-     <%=@article.main_image.url %><br/>
- <% end %>
-  <%= f.label :main_image, "Attach the Main Image(279x429 px for Review. 1170x569 px for News)" %><br />
-  <%= f.file_field :main_image %>
+  <%= f.label 'Image description' %><br />
+  <%= f.text_field :img_desc %>
+</p>
+<p>
+  <%= f.label 'Image Alternative text' %><br />
+  <%= f.text_field :img_alt_text %>
 </p>
   <p>
     <%= f.submit %>

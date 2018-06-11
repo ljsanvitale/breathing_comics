@@ -5,13 +5,13 @@ class Article < ApplicationRecord
   has_many :taggings
   has_many :tags, through: :taggings
   has_attached_file :image
-  has_attached_file :main_image#,
+  #has_attached_file :main_image#,
   #:styles => {
   #   :thumb => "100x100#",
   #   :small  => "150x150>",
   #   :medium => "200x200" }
   validates_attachment_content_type :image, :content_type => ["image/jpg", "image/jpeg", "image/png"]
-  validates_attachment_content_type :main_image, :content_type => ["image/jpg", "image/jpeg", "image/png"]
+  #validates_attachment_content_type :main_image, :content_type => ["image/jpg", "image/jpeg", "image/png"]
   default_scope { order(created_at: :desc) }
   scope :article_list, -> { where({ article_type: ["news", "notes"]}).order(created_at: :desc) }
   scope :article_reviews, -> { where(article_type: 'review').order(created_at: :desc) }
@@ -35,7 +35,7 @@ class Article < ApplicationRecord
   end
 
   def slug
-   title.downcase.gsub(" ", "-")  
+   title.downcase.gsub(" ", "-")
  end
 
  def to_param

@@ -3,7 +3,7 @@
       <div class="row article_review row-eq-height">
           <%if @article.image.exists? %>
             <div class="col-xs-6" style="padding-right:0;">
-                <%= image_tag @article.image.url, :class=>'img-responsive mx-5 article_review_img' %><br/>
+                <%= image_tag @article.image.url, :class=>'img-responsive mx-5 article_review_img',:alt=>@article.img_alt_text %><br/>
                 <% end %>
               </div>
         <div class="col-xs-6  article_review_img_text">
@@ -19,7 +19,7 @@
       <div class="row">
         <% if @article.image.exists? %>
           <div class="col-xs-12">
-            <%= image_tag @article.image.url, :class=>'img-responsive mx-5 main_article_img' %><br/>
+            <%= image_tag @article.image.url, :class=>'img-responsive mx-5 main_article_img',:alt=>@article.img_alt_text %><br/>
         </div>
         <% end %>
       </div>
