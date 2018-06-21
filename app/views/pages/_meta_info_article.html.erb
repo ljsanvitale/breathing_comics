@@ -9,8 +9,8 @@
 <%else %>
   <meta property="og:description" content="<%=@article.title%>" />
   <meta name="twitter:description" content="<%=@article.title%>"/>
-  <meta name="twitter:image" content="<%=@article.image.url%>"/>
-  <meta property="og:image" content="<%=@article.image.url%>" />
+  <meta name="twitter:image" content="<%=@article.image.url[2..@article.image.url.length]%>"/>
+  <meta property="og:image" content="<%=@article.image.url[2..@article.image.url.length]%>" />
   <meta property="article:published_time" content="<%=@article.created_at%>" />
   <% if @article.author %>
     <meta property="author" content="<%=@article.author.author_name%>" />
