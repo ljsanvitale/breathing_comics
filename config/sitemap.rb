@@ -1,16 +1,15 @@
 # Set the host name for URL creation
 SitemapGenerator::Sitemap.default_host = "https://www.breathingcomics.com"
-
-SitemapGenerator::Sitemap.adapter = SitemapGenerator::S3Adapter.new(
-  fogprovider: 'AWS',
-  awsaccesskeyid: ENV['AWS_ACCESS_KEY_ID'],
-  awssecretaccesskey: ENV['AWS_SECRET_ACCESS_KEY'],
-  fogdirectory: ENV['S3_BUCKET_NAME'],
-  fogregion: ENV['S3_REGION'])
-
-SitemapGenerator::Sitemap.sitemapshost = "https://s3-#{ENV['S3_REGION']}.amazonaws.com/#{ENV['S3_BUCKET_NAME']}/"
-SitemapGenerator::Sitemap.sitemapspath = 'sitemaps/'
-SitemapGenerator::Sitemap.publicpath = 'tmp/'
+#SitemapGenerator::Sitemap.sitemaps_host = "https://s3-#{ENV['S3_REGION']}.amazonaws.com/#{ENV['S3_BUCKET_NAME']}/"
+#SitemapGenerator::Sitemap.sitemaps_path = 'sitemaps/'
+#SitemapGenerator::Sitemap.public_path = 'tmp/'
+#SitemapGenerator::Sitemap.adapter = SitemapGenerator::WaveAdapter.new
+#SitemapGenerator::Sitemap.adapter = SitemapGenerator::S3Adapter.new(
+#  provider: 'fog/aws',
+#  aws_accesskey_id: ENV['AWS_ACCESS_KEY_ID'],
+#  aws_secret_access_key: ENV['AWS_SECRET_ACCESS_KEY'],
+#  fog_directory: ENV['S3_BUCKET_NAME'],
+#  fog_region: ENV['S3_REGION'])
 
 SitemapGenerator::Sitemap.create do
   add root_path
