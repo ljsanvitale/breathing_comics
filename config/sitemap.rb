@@ -1,6 +1,17 @@
 # Set the host name for URL creation
 SitemapGenerator::Sitemap.default_host = "https://www.breathingcomics.com"
 
+SitemapGenerator::Sitemap.adapter = SitemapGenerator::S3Adapter.new(
+  fogprovider: 'AWS',
+  awsaccesskeyid: ENV['AWS_ACCESS_KEY_ID'],
+  awssecretaccesskey: ENV['AWS_SECRET_ACCESS_KEY'],
+  fogdirectory: ENV['S3_BUCKET_NAME'],
+  fogregion: ENV['S3_REGION'])
+
+SitemapGenerator::Sitemap.sitemapshost = "https://s3-#{ENV['S3_REGION']}.amazonaws.com/#{ENV['S3_BUCKET_NAME']}/"
+SitemapGenerator::Sitemap.sitemapspath = 'sitemaps/'
+SitemapGenerator::Sitemap.publicpath = 'tmp/'
+
 SitemapGenerator::Sitemap.create do
   add root_path
   add news_path
