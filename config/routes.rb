@@ -23,4 +23,6 @@ Rails.application.routes.draw do
    get '/news', :controller => 'pages', :action => 'news_page'
    get '/reviews', :controller => 'pages', :action => 'reviews_page'
    get '/articles', :controller => 'pages', :action => 'articles_page'
+   # routes.rb file
+   get '/sitemap.xml.gz', to: redirect("https://#{ENV['S3_BUCKET_NAME']}.s3.amazonaws.com/sitemaps/sitemap.xml.gz"), as: :sitemap
 end
