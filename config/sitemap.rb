@@ -3,7 +3,6 @@ SitemapGenerator::Sitemap.default_host = "https://www.breathingcomics.com"
 SitemapGenerator::Sitemap.sitemaps_host = "https://s3-#{ENV['S3_REGION']}.amazonaws.com/#{ENV['S3_BUCKET_NAME']}/"
 SitemapGenerator::Sitemap.sitemaps_path = 'sitemaps/'
 SitemapGenerator::Sitemap.public_path = 'tmp/'
-#SitemapGenerator::Sitemap.adapter = SitemapGenerator::WaveAdapter.new
 SitemapGenerator::Sitemap.adapter = SitemapGenerator::S3Adapter.new(
   fog_provider: 'Aws',
   aws_access_key_id: ENV['AWS_ACCESS_KEY_ID'],
