@@ -1,7 +1,12 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Breathing Comics</title>
+    <% if @head_title.nil? %>
+      <title>Breathing Comics</title>
+    <%else%>
+    <title><%=@head_title%></title>
+
+    <%end%>
     <%= favicon_link_tag 'favicon.ico' %>
     <%= favicon_link_tag 'apple-touch-icon-57x57.png' %>
     <%= favicon_link_tag 'apple-touch-icon-114x114.png' %>
@@ -18,7 +23,6 @@
     <%= favicon_link_tag 'favicon-16x16.png' %>
     <%= favicon_link_tag 'favicon-128.png' %>
 
-    <meta name="application-name" content="&nbsp;"/>
     <meta name="msapplication-TileColor" content="#FFFFFF" />
     <meta name="msapplication-TileImage" content="mstile-144x144.png" />
     <meta name="msapplication-square70x70logo" content="mstile-70x70.png" />
@@ -26,7 +30,7 @@
     <meta name="msapplication-wide310x150logo" content="mstile-310x150.png" />
     <meta name="msapplication-square310x310logo" content="mstile-310x310.png" />
     <meta name="p:domain_verify" content="304fa424230d9f83a693a014029ef3f9"/>
-    
+
     <%= csrf_meta_tags %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>

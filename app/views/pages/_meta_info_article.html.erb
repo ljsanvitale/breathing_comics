@@ -1,28 +1,31 @@
-<meta name="description" content="All you need to know about American comics, European Comics, main stream and alternative comics.Breathing comics made by experts!"/>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="apple-mobile-web-app-title" content="Breathing comics" />
 <link rel="alternate" hreflang="en" href="https://www.breathingcomics.com/" />
+<meta property="og:site_name" content="Breathing Comics" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content=" <%=request.url%>" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="Breathing Comics" />
 
 <% if @article.nil? %>
   <meta property="og:description" content="All you need to know about American comics, European Comics, main stream and alternative comics.Breathing comics made by experts!" />
   <meta property="twitter:description" content="All you need to know about American comics, European Comics, main stream and alternative comics.Breathing comics made by experts!" />
+  <meta property="og:title" content="Breathing Comics" />
+  <meta name="twitter:title" content="Breathing Comics" />
+  <meta name="apple-mobile-web-app-title" content="Breathing comics" />
+
 <%else %>
-  <meta property="og:description" content="<%=@article.title%>" />
-  <meta name="twitter:description" content="<%=@article.title%>"/>
+  <meta name="description" content="<%=@article.subtitle%>"/>
+  <meta property="og:description" content="<%=@article.subtitle%>" />
+  <meta name="twitter:description" content="<%=@article.subtitle%>"/>
   <meta name="twitter:image" content="https://<%=@article.image.url[2..@article.image.url.length]%>"/>
   <meta property="og:image" content="https://<%=@article.image.url[2..@article.image.url.length]%>" />
+  <meta property="og:title" content="<%=@article.title%>" />
+  <meta name="twitter:title" content="<%=@article.title%>" />
+  <meta name="apple-mobile-web-app-title" content="<%=@article.title%>" />
   <meta property="article:published_time" content="<%=@article.created_at%>" />
   <% if @article.author %>
     <meta property="author" content="<%=@article.author.author_name%>" />
   <%end%>
 <%end  %>
-
-<meta property="og:site_name" content="Breathing Comics" />
-<meta property="og:title" content="Breathing Comics" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content=" <%=request.url%>" />
-<meta name="twitter:card" content="summary" />
-<meta name="twitter:title" content="Breathing Comics" />
-<meta name="twitter:site" content="Breathing Comics" />
