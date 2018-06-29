@@ -2,16 +2,18 @@
   <%= render partial: 'meta_info' %>
 <% end %>
 <h2 class="text-center author_title">Notes</h2>
-<div class="col-xs-8  main_title_small nopadding" >
+<div class="<%=@mobile%>  main_title_small nopadding" >
   <div id='article_list'>
     <% @articles.each do |article| %>
           <%= render partial: 'article_list_detail', :locals => {:article => article}  %>
     <% end %>
   </div>
   <%= will_paginate @articles, class: 'article_pagination', renderer: WillPaginateInfinite::InfinitePagination %></div>
+  <%unless @mobile %>
 <div class="col-xs-4 nopadding" >
   <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
   <!-- Notes Lateral -->
   <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-3721531347311894" data-ad-slot="9959235409" data-ad-format="auto"></ins>
   <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </div>
+<%end%>
