@@ -4,14 +4,15 @@
 @import "bootstrap/theme";
 
 
-/*@font-face {
-  font-family: LemonMilk;
-  src: url('/assets/fonts/LemonMilk.otf') format("otf");
+@font-face {
+  font-family: "LemonMilk";
+  src: url('/assets/LemonMilk');
  }
-@font-face { font-family: LemonMilk;
+@font-face { font-family: "LemonMilk";
  font-weight: bold;
- src: url('/assets/fonts/LemonMilkbold.otf') format("otf");
-}*/
+ src: url('/assets/LemonMilkbold.otf');
+}
+
 
 div {
   /*border-style: solid;*/
@@ -20,6 +21,7 @@ div {
 h1 {
   /*margin: 10px;*/
     font-size: 3vw;
+    /*font-family: LemonMilk;*/
 }
 a {
   color: inherit;
@@ -58,8 +60,10 @@ h3 {
   margin-left: 3vw;
   margin-bottom: 0;
   font-size: 1vw;
+  font-family: LemonMilk;
 }
 .hero_main_text{
+  font-family: LemonMilk;
   color:white;
   margin-left: 3vw;
   margin-bottom:0;
@@ -301,8 +305,7 @@ margin-right:2vw;
   padding-bottom: 5vh;
 }
 .main_review_art{
-  /*color:white;
-  font-family: Heroic;*/
+  font-family: LemonMilk;
   margin: 1vw;
 }
 .main_review_art_by p{
@@ -417,8 +420,8 @@ margin-right:2vw;
 }
 .navbar-default .navbar-nav li a {
   color: white;
-  font-size: 2vw;
-  font-family: Heroic;
+  font-size: 1.5vw;
+  font-family: LemonMilk;
   float: left;
   text-align: center;
 }
@@ -479,7 +482,7 @@ h3 {
  .navbar-default .navbar-nav li a {
    color: white;
    font-size: 4vw;
-   font-family: Heroic;
+   font-family: LemonMilk;
    float: left;
    text-align: center;
  }
@@ -492,6 +495,7 @@ h3 {
   .hero_main p{
     font-size: 2.5vw;
     margin-left: 0.5vw;
+    font-family:LemonMilk;
   }
   .article_list_small {
     font-size:2.5vw;
