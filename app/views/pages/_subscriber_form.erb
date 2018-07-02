@@ -1,8 +1,8 @@
 <div class="row-eq-height nopadding subscribe_form">
-<div class="col-xs-8 nopadding ">
+<div class="col-xs-6 nopadding ">
   <p class="subscribe_text text-center"> Become a member for <span style="color:#e5127d">FREE!</span></p>
 </div>
-<div class="col-xs-4 nopadding ">
+<div class="col-xs-6 nopadding ">
   <%= form_for [:admin, @subscriber] do |f| %>
     <span style="float:left;"><%= f.text_field :email,class: 'form-control', placeholder:"Enter your email" %> </span>
     <span><%= f.button 'Submit',type: 'submit',class: 'btn btn-default' %> </span>
