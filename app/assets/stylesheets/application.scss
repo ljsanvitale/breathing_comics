@@ -8,11 +8,18 @@
   font-family: "LemonMilk";
   src: font-url('/assets/LemonMilk');
  }
-@font-face { font-family: "LemonMilk";
- font-weight: bold;
- src: font-url('/assets/LemonMilkbold.otf');
-}
-
+ @font-face {
+   font-family: "LemonMilk2";
+   src: font-url('/assets/LemonMilk.otf');
+  }
+  @font-face {
+    font-family: "LemonMilk3";
+    src: font-url('LemonMilk.otf');
+   }
+   @font-face {
+     font-family: "LemonMilk4";
+     src: font-url('fonts/LemonMilk.otf');
+    }
 
 div {
   /*border-style: solid;*/
@@ -63,7 +70,7 @@ h3 {
   font-family: LemonMilk;
 }
 .hero_main_text{
-  font-family: LemonMilk;
+  font-family: LemonMilk2;
   color:white;
   margin-left: 3vw;
   margin-bottom:0;
@@ -305,7 +312,7 @@ margin-right:2vw;
   padding-bottom: 5vh;
 }
 .main_review_art{
-  font-family: LemonMilk;
+  font-family: LemonMilk3;
   margin: 1vw;
 }
 .main_review_art_by p{
@@ -421,7 +428,7 @@ margin-right:2vw;
 .navbar-default .navbar-nav li a {
   color: white;
   font-size: 1.5vw;
-  font-family: LemonMilk;
+  font-family: LemonMilk4;
   float: left;
   text-align: center;
 }
