@@ -21,6 +21,10 @@
     <%= f.select :article_type,options_for_select(["news","notes","review"],f.object.article_type) %>
   </p>
   <p>
+    <%= f.label :published %><br />
+    <%= f.check_box :published %>
+  </p>
+  <p>
     <%= f.label :story_by %><br/>
     <%=f.text_field :story_by %>
   </p>

@@ -16,10 +16,6 @@ class Admin::ArticlesController < Admin::BaseController
   end
   def create
     @article = Article.new(article_params)
-
-    #@article.title = params[:article][:title]
-    #@article.body = params[:article][:body]
-
     @article.save
     flash.notice = "Article created!"
     redirect_to admin_article_path(@article)

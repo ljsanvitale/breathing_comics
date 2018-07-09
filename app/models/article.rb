@@ -14,6 +14,9 @@ class Article < ApplicationRecord
   #validates_attachment_content_type :main_image, :content_type => ["image/jpg", "image/jpeg", "image/png"]
   default_scope { order(created_at: :desc) }
   scope :article_list, -> { where({ article_type: ["news", "notes"]}).order(created_at: :desc) }
+  #scope :article_list, ->{where("articles.article_type IN (?) AND articles.published=? ", ["news", "notes"],false).order(created_at: :desc)}
+
+
   scope :article_reviews, -> { where(article_type: 'review').order(created_at: :desc) }
   scope :article_notes, -> { where(article_type: 'notes').order(created_at: :desc) }
   scope :article_news, -> { where(article_type: 'news').order(created_at: :desc) }
