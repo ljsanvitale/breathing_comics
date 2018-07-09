@@ -31,4 +31,5 @@ Rails.application.routes.draw do
    get '/previews', :controller => 'pages', :action => 'previews_page'
    # routes.rb file
    get '/sitemap.xml.gz', to: redirect("https://#{ENV['S3_BUCKET_NAME']}.s3.amazonaws.com/sitemaps/sitemap.xml.gz"), as: :sitemap
+   match '*path' => redirect('/'), via: :get
 end
