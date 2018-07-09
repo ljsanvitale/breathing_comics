@@ -4,8 +4,13 @@ Rails.application.routes.draw do
   namespace :admin do
     root to: 'articles#index'
     resources :articles do
-    resources :comments
+      resources :comments
     end
+    get '/reviews', :controller => 'articles', :action => 'articles_filtered', :art_type =>'reviews'
+    get '/previews', :controller => 'articles', :action => 'articles_filtered', :art_type =>'previews'
+    get '/news', :controller => 'articles',:action => 'articles_filtered', :art_type =>'news'
+    get '/notes', :controller => 'articles', :action => 'articles_filtered', :art_type =>'notes'
+
    resources :tags
    resources :users
    resources :authors
