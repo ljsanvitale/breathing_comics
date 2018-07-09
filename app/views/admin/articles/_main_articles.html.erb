@@ -4,7 +4,7 @@
       <% @articles.each do |article| %>
         <li>
           <%= link_to article.title, admin_article_path(article), class: 'article_title', id: "article_#{article.id}" %>
-          <span>Created at <%=article.created_at.strftime("%F")%> | Published: <%=article.published%> | <%= link_to "edit", edit_admin_article_path(article) %> | <%= link_to "delete", admin_article_path(article), method: :delete,data: {confirm: "Really delete the article?"}%></span>
+          <span> Views: <%=article.count_views%> Created at <%=article.created_at.strftime("%F")%> | Published: <%=article.published%> | <%= link_to "edit", edit_admin_article_path(article) %> | <%= link_to "delete", admin_article_path(article), method: :delete,data: {confirm: "Really delete the article?"}%></span>
 
         </li>
 

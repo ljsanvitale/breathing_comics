@@ -19,7 +19,7 @@ before_action :detect_device_variant, :only => [:show, :tag_page, :author_page,:
     @article.save
     @comment = Comment.new
     @comment.article_id = @article.id
-    @most_read  = Article.article_list.all_except(@article).order('count_views DESC').limit(5)
+    @most_read  = Article.article_list.all_except(@article).reorder(count_views: :desc).limit(5)
     @subscriber = Subscriber.new
     @head_title = @article.title
   end
