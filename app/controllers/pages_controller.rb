@@ -78,6 +78,16 @@ before_action :detect_device_variant, :only => [:show, :tag_page, :author_page,:
     end
   end
 
+  def previews_page
+    @articles= Article.article_previews.paginate(:page => params[:page],:per_page => 6 )
+    @head_title = "Comic Previews | Breathing Comics"
+
+    respond_to do |format|
+      format.html
+      format.js
+    end
+  end
+
   def articles_page
     @articles= Article.article_notes.paginate(:page => params[:page],:per_page => 5 )
     @head_title = "Comic Articles | Breathing Comics"

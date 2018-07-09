@@ -16,6 +16,7 @@ class Article < ApplicationRecord
   scope :article_list, ->{where("articles.article_type IN (?) AND articles.published=? ", ["news", "notes"],true).order(created_at: :desc)}
   scope :article_reviews, -> { where("articles.article_type=? AND articles.published=? ",  'review',true).order(created_at: :desc) }
   scope :article_notes, -> { where("articles.article_type=? AND articles.published=? ",  'notes',true).order(created_at: :desc) }
+  scope :article_previews, -> { where("articles.article_type=? AND articles.published=? ",  'preview',true).order(created_at: :desc) }
   scope :article_news, -> { where("articles.article_type=? AND articles.published=? ",  'news',true).order(created_at: :desc) }
 
   def tag_list
