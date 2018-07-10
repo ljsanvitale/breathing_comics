@@ -195,9 +195,14 @@ margin-right:2vw;
   /*margin-bottom: 10px;*/
 }
 .article_list_title{
-  margin-top:5px;
+  /*margin-top:5px;*/
   font-size:1.6vw;
   line-height: 2.5vw;
+}
+.review_article_list_title{
+  margin-top:5px;
+  font-size:1.0vw;
+  line-height: 1.5vw;
 }
 
 .article_list_small {
@@ -489,6 +494,12 @@ h3 {
   }
   .article_list_title{
     font-size:3vw;
+    line-height: 3.5vw;
+  }
+  .review_article_list_title{
+    /*margin-top:5px;*/
+    font-size:2vw;
+    line-height: 2.5vw;
   }
   .hero_main p{
     font-size: 2.5vw;
@@ -499,8 +510,9 @@ h3 {
   .article_list_small {
     font-size:2.5vw;
   }
+
   .main_title_small p{
-     font-size:2.5vw;
+     font-size:2.0vw;
   }
   .article_review_img_text{
     padding-top: 2vh;

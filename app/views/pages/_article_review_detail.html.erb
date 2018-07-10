@@ -1,12 +1,12 @@
 
-<div class="col-xs-4 article_list_review " >
- <div class="col-xs-12 " >
+<div class="<%=mobile%> article_list_review nopadding" >
+  <div class="col-xs-12 " >
    <% if article.image.exists? %>
       <%= link_to image_tag(article.image.url, :class=>"img-responsive",:alt=>article.img_alt_text), page_path(article) %>
   <% end %>
 </div>
  <div class="col-xs-12" >
-   <div class="article_list_title">
+   <div class="review_article_list_title">
      <%= link_to article.title, page_path(article) %>
    </div>
    <%if article.article_type=="preview" %>

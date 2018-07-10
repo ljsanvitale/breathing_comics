@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
-before_action :detect_device_variant, :only => [:show, :tag_page, :author_page,:news_page, :articles_page]
+before_action :detect_device_variant, :only => [:show, :tag_page, :author_page,:news_page, :articles_page,:previews_page, :reviews_page]
 
   def index
     @main_four_articles=Article.article_list.take(4)
@@ -71,7 +71,11 @@ before_action :detect_device_variant, :only => [:show, :tag_page, :author_page,:
   def reviews_page
     @articles= Article.article_reviews.paginate(:page => params[:page],:per_page => 6 )
     @head_title = "Comic Reviews | Breathing Comics"
-
+    if request.variant.phone?
+      @mobile = 'col-xs-6'
+    else
+      @mobile = 'col-xs-3'
+    end
     respond_to do |format|
       format.html
       format.js
@@ -81,7 +85,11 @@ before_action :detect_device_variant, :only => [:show, :tag_page, :author_page,:
   def previews_page
     @articles= Article.article_previews.paginate(:page => params[:page],:per_page => 6 )
     @head_title = "Comic Previews | Breathing Comics"
-
+    if request.variant.phone?
+      @mobile = 'col-xs-6'
+    else
+      @mobile = 'col-xs-3'
+    end
     respond_to do |format|
       format.html
       format.js
