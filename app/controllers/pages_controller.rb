@@ -73,8 +73,10 @@ before_action :detect_device_variant, :only => [:show, :tag_page, :author_page,:
     @head_title = "Comic Reviews | Breathing Comics"
     if request.variant.phone?
       @mobile = 'col-xs-6'
+      @mobile_main = 'col-xs-12'
     else
       @mobile = 'col-xs-3'
+      @mobile_main = 'col-xs-8'
     end
     respond_to do |format|
       format.html
@@ -87,8 +89,10 @@ before_action :detect_device_variant, :only => [:show, :tag_page, :author_page,:
     @head_title = "Comic Previews | Breathing Comics"
     if request.variant.phone?
       @mobile = 'col-xs-6'
+      @mobile_main = 'col-xs-12'
     else
       @mobile = 'col-xs-3'
+      @mobile_main = 'col-xs-8'
     end
     respond_to do |format|
       format.html
