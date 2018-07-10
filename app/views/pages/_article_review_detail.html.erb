@@ -10,7 +10,7 @@
      <%= link_to article.title, page_path(article) %>
    </div>
    <%if article.article_type=="preview" %>
-    <p class="article_list_small"> <%= article.publisher %> | <%=article.published_at.strftime("%d %B %Y")%></p>
+    <p class="article_list_small"> <%= article.publisher %> | Available: <%=article.published_at.strftime("%d %B %Y")%></p>
    <%else%>
     <p class="article_list_small"> By <%= + link_to(article.author.author_name, author_page_path(article.author)) if article.author%> | <%=distance_of_time_in_words_to_now(article.created_at)%> <%= "|" + article.comments.size.to_s if article.comments.size > 0 %></p>
     <%end%>
