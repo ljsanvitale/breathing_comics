@@ -69,7 +69,7 @@ before_action :detect_device_variant, :only => [:show, :tag_page, :author_page,:
   end
 
   def reviews_page
-    @articles= Article.article_reviews.paginate(:page => params[:page],:per_page => 6 )
+    @articles= Article.article_reviews.paginate(:page => params[:page],:per_page => 12 )
     @head_title = "Comic Reviews | Breathing Comics"
     if request.variant.phone?
       @mobile = 'col-xs-6'
@@ -85,7 +85,7 @@ before_action :detect_device_variant, :only => [:show, :tag_page, :author_page,:
   end
 
   def previews_page
-    @articles= Article.article_previews.paginate(:page => params[:page],:per_page => 6 )
+    @articles= Article.article_previews.paginate(:page => params[:page],:per_page => 12 )
     @head_title = "Comic Previews | Breathing Comics"
     if request.variant.phone?
       @mobile = 'col-xs-6'
