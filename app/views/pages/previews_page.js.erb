@@ -1,1 +1,1 @@
-<%= infinite_append "#article_list", { partial: "pages/article_review_detail", collection: @articles , :as => :article }  %>
+<%= infinite_append "#article_list", { partial: "pages/article_review_detail", collection: @articles , :as => :article, :locals=>{:mobile=> @mobile} }  %>
