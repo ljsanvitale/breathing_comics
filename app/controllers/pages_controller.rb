@@ -1,11 +1,16 @@
 class PagesController < ApplicationController
-before_action :detect_device_variant, :only => [:show, :tag_page, :author_page,:news_page, :articles_page,:previews_page, :reviews_page]
+before_action :detect_device_variant, :only => [:index, :show, :tag_page, :author_page,:news_page, :articles_page,:previews_page, :reviews_page]
 
   def index
     @main_four_articles=Article.article_list.take(4)
     @review_articles=Article.article_reviews.take(3)
     @articles_list=Article.article_list.all_except(@main_four_articles).paginate(:page => params[:page],:per_page => 5 )
     @subscriber = Subscriber.new
+    if request.variant.phone?
+      @mobile = true
+    else
+      @mobile = false
+    end
     respond_to do |format|
       format.html
       format.js
