@@ -3,17 +3,9 @@
 @import "bootstrap";
 @import "bootstrap/theme";
 
+@font-face {font-family: "LemonMilk"; src: font-url('LemonMilk.otf'); }
 
-  @font-face {
-    font-family: "LemonMilk";
-    src: font-url('LemonMilk.otf');
-   }
-
-
-div {
-  /*border-style: solid;*/
-
-}
+div { /*border-style: solid;*/}
 h1 {
   /*margin: 10px;*/
     font-size: 3vw;
