@@ -62,4 +62,3 @@ gem 'sitemap_generator'
 gem 'fog-aws'
 gem 'sprockets', '~> 3.7.2'
 gem 'heroku-deflater', :group => :production
-gem 'easy_optimise'

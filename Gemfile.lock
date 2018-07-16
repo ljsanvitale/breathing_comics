@@ -49,7 +49,7 @@ GEM
     addressable (2.5.2)
       public_suffix (>= 2.0.2, < 4.0)
     arel (8.0.0)
-    autoprefixer-rails (8.6.5)
+    autoprefixer-rails (9.0.0)
       execjs
     aws-eventstream (1.0.1)
     aws-partitions (1.96.0)
@@ -658,8 +658,6 @@ GEM
     childprocess (0.9.0)
       ffi (~> 1.0, >= 1.0.11)
     climate_control (0.2.0)
-    cocaine (0.5.8)
-      climate_control (>= 0.0.3, < 1.0)
     coffee-rails (4.2.2)
       coffee-script (>= 2.2.0)
       railties (>= 4.0.0)
@@ -669,8 +667,6 @@ GEM
     coffee-script-source (1.12.2)
     concurrent-ruby (1.0.5)
     crass (1.0.4)
-    easy_optimise (0.1.0)
-      paperclip (~> 4.2)
     erubi (1.7.1)
     excon (0.62.0)
     execjs (2.7.0)
@@ -725,7 +721,7 @@ GEM
     mime-types (3.1)
       mime-types-data (~> 3.2015)
     mime-types-data (3.2016.0521)
-    mimemagic (0.3.0)
+    mimemagic (0.3.2)
     mini_mime (1.0.0)
     mini_portile2 (2.3.0)
     minitest (5.11.3)
@@ -743,12 +739,12 @@ GEM
       multi_xml (~> 0.5)
       rack (>= 1.2, < 3)
     orm_adapter (0.5.0)
-    paperclip (4.3.7)
-      activemodel (>= 3.2.0)
-      activesupport (>= 3.2.0)
-      cocaine (~> 0.5.5)
+    paperclip (6.0.0)
+      activemodel (>= 4.2.0)
+      activesupport (>= 4.2.0)
       mime-types
-      mimemagic (= 0.3.0)
+      mimemagic (~> 0.3.0)
+      terrapin (~> 0.6.0)
     pg (1.0.0)
     public_suffix (3.0.2)
     puma (3.12.0)
@@ -859,7 +855,6 @@ DEPENDENCIES
   capybara (~> 2.13)
   ckeditor!
   coffee-rails (~> 4.2)
-  easy_optimise
   figaro
   fog-aws
   heroku-deflater
