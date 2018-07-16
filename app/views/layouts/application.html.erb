@@ -32,7 +32,7 @@
     <meta name="p:domain_verify" content="304fa424230d9f83a693a014029ef3f9"/>
 
     <%= csrf_meta_tags %>
-    <%= stylesheet_link_tag 'application', media: 'all',async: Rails.env.production? %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload',async: Rails.env.production? %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload', async: Rails.env.production? %>
     <%= javascript_include_tag Ckeditor.cdn_url, async: Rails.env.production? %>
     <!-- Global site tag (gtag.js) - Google Analytics -->

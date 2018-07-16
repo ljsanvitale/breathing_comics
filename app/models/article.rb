@@ -11,16 +11,16 @@ class Article < ApplicationRecord
   #   :medium => "200x200" }
   validates_attachment_content_type :image, :content_type => ["image/jpg", "image/jpeg", "image/png"]
   #validates_attachment_content_type :main_image, :content_type => ["image/jpg", "image/jpeg", "image/png"]
-  default_scope { order(created_at: :desc) }
-  scope :article_list, ->{where("articles.article_type IN (?) AND articles.published=? ", ["news", "notes"],true).order(created_at: :desc)}
-  scope :article_reviews, -> { where("articles.article_type=? AND articles.published=? ",  'review',true).order(created_at: :desc) }
-  scope :admin_article_reviews, -> { where("articles.article_type=?",  'review').order(created_at: :desc) }
-  scope :article_notes, -> { where("articles.article_type=? AND articles.published=? ",  'notes',true).order(created_at: :desc) }
-  scope :admin_article_notes, -> { where("articles.article_type=?",  'notes').order(created_at: :desc) }
-  scope :article_previews, -> { where("articles.article_type=? AND articles.published=? ",  'preview',true).order(created_at: :desc) }
-  scope :admin_article_previews, -> { where("articles.article_type=?",  'preview').order(created_at: :desc) }
-  scope :article_news, -> { where("articles.article_type=? AND articles.published=? ",  'news',true).order(created_at: :desc) }
-  scope :admin_article_news, -> { where("articles.article_type=?",  'news').order(created_at: :desc) }
+  default_scope { order(updated_at: :desc) }
+  scope :article_list, ->{where("articles.article_type IN (?) AND articles.published=? ", ["news", "notes"],true).order(updated_at: :desc)}
+  scope :article_reviews, -> { where("articles.article_type=? AND articles.published=? ",  'review',true).order(updated_at: :desc) }
+  scope :admin_article_reviews, -> { where("articles.article_type=?",  'review').order(updated_at: :desc) }
+  scope :article_notes, -> { where("articles.article_type=? AND articles.published=? ",  'notes',true).order(updated_at: :desc) }
+  scope :admin_article_notes, -> { where("articles.article_type=?",  'notes').order(updated_at: :desc) }
+  scope :article_previews, -> { where("articles.article_type=? AND articles.published=? ",  'preview',true).order(updated_at: :desc) }
+  scope :admin_article_previews, -> { where("articles.article_type=?",  'preview').order(updated_at: :desc) }
+  scope :article_news, -> { where("articles.article_type=? AND articles.published=? ",  'news',true).order(updated_at: :desc) }
+  scope :admin_article_news, -> { where("articles.article_type=?",  'news').order(updated_at: :desc) }
 
   def tag_list
     self.tags.collect do |tag|
