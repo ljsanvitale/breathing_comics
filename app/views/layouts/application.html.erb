@@ -33,8 +33,10 @@
 
     <%= csrf_meta_tags %>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload',async: Rails.env.production? %>
+    <%= stylesheet_link_tag 'rrssb', media: 'all', 'data-turbolinks-track': 'reload',async: Rails.env.production? %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload', async: Rails.env.production? %>
     <%= javascript_include_tag Ckeditor.cdn_url, async: Rails.env.production? %>
+    
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-120570521-1"></script>
     <script>
@@ -80,6 +82,5 @@
         </div>
       </div>
     </div>
-
   </body>
 </html>

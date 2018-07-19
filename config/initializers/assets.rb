@@ -11,7 +11,8 @@ Rails.application.config.assets.precompile += ['pages.css']
 Rails.application.config.assets.precompile += ['screen.css']
 Rails.application.config.assets.precompile += %w( ckeditor/*)
 Rails.application.config.assets.precompile += %w(ckeditor/config.js)
-
+Rails.application.config.assets.precompile += %w( rrssb.css )
+Rails.application.config.assets.precompile += %w( rrssbb.min.js )
 # Precompile additional assets.
 # application.js, application.css, and all non-JS/CSS in the app/assets
 # folder are already added.

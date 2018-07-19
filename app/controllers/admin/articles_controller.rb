@@ -6,7 +6,7 @@ class Admin::ArticlesController < Admin::BaseController
   end
 
   def show
-    @article = Article.find(params[:id])
+    @article = Article.find_by_article_slug(params[:id])
     @comment = Comment.new
     @comment.article_id = @article.id
 
@@ -22,17 +22,17 @@ class Admin::ArticlesController < Admin::BaseController
 
   end
   def destroy
-    @article = Article.find(params[:id])
+    @article = Article.find_by_article_slug(params[:id])
     @article.destroy
   #  redirect_to :controller => 'article', :action => 'index'
     flash.notice = "Article deleted!"
     redirect_to(:action => :index)
   end
   def edit
-    @article = Article.find(params[:id])
+    @article = Article.find_by_article_slug(params[:id])
   end
   def update
-    @article = Article.find(params[:id])
+    @article = Article.find_by_article_slug(params[:id])
     @article.update(article_params)
     flash.notice = "Article '#{@article.title}' Updated!"
     redirect_to admin_article_path(@article)

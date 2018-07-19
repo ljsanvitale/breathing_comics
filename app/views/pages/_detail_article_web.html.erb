@@ -33,11 +33,13 @@
 
     <div class="row article_content ml-1">
       <div class="col-xs-12">
+
         <%= (@article.body).html_safe %><br />
         <p> Tags:<% @article.tags.each do |tag| %>
           <%= link_to tag.name, tag_page_path(tag) %>
           <% end %>
         </p>
+        <%=render partial: 'social_toolbar'%>
       </div>
     </div>
     <!--<h3>Comments (<%= @article.comments.size %>)</h3>-->

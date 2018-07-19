@@ -38,6 +38,6 @@ class Article < ApplicationRecord
  end
 
  def to_param
-  "#{id}-#{slug}"
+  "#{article_slug}"
   end
 end
