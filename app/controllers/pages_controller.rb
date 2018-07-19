@@ -1,5 +1,6 @@
 class PagesController < ApplicationController
 before_action :detect_device_variant, :only => [:index, :show, :tag_page, :author_page,:news_page, :articles_page,:previews_page, :reviews_page]
+around_action :catch_not_found
 
   def index
     @main_four_articles=Article.article_list.take(4)
@@ -22,11 +23,13 @@ before_action :detect_device_variant, :only => [:index, :show, :tag_page, :autho
     @article = Article.find(params[:id])
     @article.count_views=@article.count_views+1
     @article.save
-    @comment = Comment.new
-    @comment.article_id = @article.id
+    #@comment = Comment.new
+    #@comment.article_id = @article.id
     @most_read  = Article.article_list.all_except(@article).reorder(count_views: :desc).limit(5)
     @subscriber = Subscriber.new
     @head_title = @article.title
+  #rescue ActiveRecord::RecordNotFound
+  #  redirect_to root_url, :flash => { :error => "Record not found." }
   end
 
   def tag_page
@@ -118,4 +121,13 @@ before_action :detect_device_variant, :only => [:index, :show, :tag_page, :autho
       format.js
     end
   end
+
+  private
+
+def catch_not_found
+  yield
+rescue ActiveRecord::RecordNotFound
+  redirect_to root_url
+end
+
 end
