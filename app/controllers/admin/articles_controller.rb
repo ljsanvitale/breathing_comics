@@ -37,7 +37,7 @@ class Admin::ArticlesController < Admin::BaseController
     flash.notice = "Article '#{@article.title}' Updated!"
     redirect_to admin_article_path(@article)
   end
-  
+
   def articles_filtered
     case params[:art_type]
     when 'reviews'

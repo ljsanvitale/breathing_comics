@@ -20,6 +20,7 @@ around_action :catch_not_found
   end
 
   def show
+
     @article = Article.find(params[:id])
     @article.count_views=@article.count_views+1
     @article.save

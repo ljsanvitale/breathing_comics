@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 201810708344356) do
+ActiveRecord::Schema.define(version: 201810708384357) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -44,6 +44,7 @@ ActiveRecord::Schema.define(version: 201810708344356) do
     t.string "img_desc"
     t.string "img_alt_text"
     t.boolean "published"
+    t.string "article_slug"
     t.index ["author_id"], name: "index_articles_on_author_id"
   end
 
