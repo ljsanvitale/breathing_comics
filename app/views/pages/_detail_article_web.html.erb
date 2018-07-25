@@ -33,12 +33,26 @@
 
     <div class="row article_content ml-1">
       <div class="col-xs-12">
-
         <%= (@article.body).html_safe %><br />
-        <p> Tags:<% @article.tags.each do |tag| %>
-          <%= link_to tag.name, tag_page_path(tag) %>
-          <% end %>
-        </p>
+        <% if @article.article_type.in?(['review','preview'])then%>
+
+            <div class="row">
+              <div class="col-xs-6 previous-btn">
+                <%if @article.previous %>
+                  <%= link_to "Previous", page_path(@article.previous) %>
+                <%end%>
+              </div>
+              <div class="col-xs-6 next-btn">
+                <%if @article.next %>
+                  <%= link_to "Next", page_path(@article.next) %>
+                <%end%>
+              </div>
+            </div>
+            <%end%>
+          <p> Tags:<% @article.tags.each do |tag| %>
+            <%= link_to tag.name, tag_page_path(tag) %>
+            <% end %>
+          </p>
         <%=render partial: 'social_toolbar'%>
       </div>
     </div>

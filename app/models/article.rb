@@ -40,4 +40,20 @@ class Article < ApplicationRecord
  def to_param
   "#{article_slug}"
   end
+
+  def next
+    if self.article_type=='preview'
+      Article.article_previews.reorder(created_at: :asc).where("id > ?", id).limit(1).first
+    else
+      Article.article_reviews.reorder(created_at: :asc).where("id > ?", id).limit(1).first
+    end
+  end
+
+  def previous
+    if self.article_type=='preview'
+      Article.article_previews.where("id < ?", id).limit(1).first
+    else
+      Article.article_reviews.where("id < ?", id).limit(1).first
+    end
+  end
 end
