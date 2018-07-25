@@ -9,7 +9,9 @@
         <div class="col-xs-8  article_review_img_text">
           <p> STORY BY : <%=@article.story_by%></p>
           <p> ART BY: <%=@article.art_by%></p>
-          <p> PAGES: <%=@article.number_pages%></p>
+          <% if @article.number_pages %>
+            <p> PAGES: <%=@article.number_pages%></p>
+          <%end%>
           <p> PUBLISHER :<%=@article.publisher%> | <%=@article.published_at.strftime("%B %Y")%></p>
           <p> COVER PRICE  : <%=@article.cover_price%></p>
           <% unless @article.url.empty? %>
