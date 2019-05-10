@@ -2,7 +2,7 @@ class Admin::ArticlesController < Admin::BaseController
   include ArticlesHelper
 
   def index
-    @articles=Article.all.paginate(:page => params[:page],:per_page => 20 )
+    @articles=Article.all.paginate(:page => params[:page],:per_page => 40 )
   end
 
   def show
@@ -41,15 +41,15 @@ class Admin::ArticlesController < Admin::BaseController
   def articles_filtered
     case params[:art_type]
     when 'reviews'
-      @articles=Article.admin_article_reviews.paginate(:page => params[:page],:per_page => 20 )
+      @articles=Article.admin_article_reviews.paginate(:page => params[:page],:per_page => 40 )
     when 'previews'
-      @articles=Article.admin_article_previews.paginate(:page => params[:page],:per_page => 20 )
+      @articles=Article.admin_article_previews.paginate(:page => params[:page],:per_page => 40 )
     when 'news'
-      @articles=Article.admin_article_news.paginate(:page => params[:page],:per_page => 20 )
+      @articles=Article.admin_article_news.paginate(:page => params[:page],:per_page => 40 )
     when 'notes'
-      @articles=Article.admin_article_notes.paginate(:page => params[:page],:per_page => 20 )
+      @articles=Article.admin_article_notes.paginate(:page => params[:page],:per_page => 40 )
     else
-      @articles=Article.all.paginate(:page => params[:page],:per_page => 20 )
+      @articles=Article.all.paginate(:page => params[:page],:per_page => 40 )
     end
   end
 
